@@ -1,0 +1,6 @@
+[server]
+# Aumenta o limite maximo de mensagem para 1GB
+maxMessageSize = 1000
+
+# Aumenta o limite de upload de arquivos para 1GB
+maxUploadSize = 1000
