@@ -1,0 +1,305 @@
+{
+  "arquivo_transcricoes": {
+    "mensagem_mais_antiga": {
+      "data_hora": "2026-04-19 10:39:45",
+      "data": "2026-04-19",
+      "agente": "coe_copilotoRh"
+    }
+  },
+  "periodo": {
+    "data_inicial": "2026-04-19",
+    "data_final": "2026-05-19",
+    "dias": 30
+  },
+  "diagnostico": {
+    "linhas_agente_fer_total_csv": 2479,
+    "linhas_no_periodo": 2475,
+    "sessoes_validas": 2453,
+    "sessoes_engajadas_calc": 1505,
+    "linhas_descartadas_studio_design": 22,
+    "linhas_descartadas_parse_error": 0
+  },
+  "alcance": {
+    "usuarios_unicos": 961,
+    "media_sessoes_por_usuario": 1.57,
+    "usuarios_recorrentes": 315,
+    "pct_recorrentes": 32.8,
+    "frequencia_de_uso": {
+      "1 sessao": 646,
+      "2 sessoes": 198,
+      "3-5 sessoes": 103,
+      "6-10 sessoes": 13,
+      "11-20 sessoes": 1,
+      "21+ sessoes": 0
+    },
+    "distribuicao_por_dia_da_semana": {
+      "Segunda-feira": 404,
+      "Terca-feira": 597,
+      "Quarta-feira": 666,
+      "Quinta-feira": 438,
+      "Sexta-feira": 215,
+      "Sabado": 69,
+      "Domingo": 64
+    }
+  },
+  "conteudo": {
+    "ranking_completo_topicos": [
+      [
+        "ProcessosRH",
+        1814
+      ],
+      [
+        "Greeting",
+        225
+      ],
+      [
+        "P:UniversalSearchTool",
+        194
+      ],
+      [
+        "AssuntoForadoEscopo",
+        188
+      ],
+      [
+        "AdiantamentoeReembolso",
+        62
+      ],
+      [
+        "ViagensHospedagemeMudana",
+        44
+      ],
+      [
+        "EventosCorporativoseTreinamentos",
+        38
+      ],
+      [
+        "MedieseProcessamentodeNotas",
+        27
+      ],
+      [
+        "ProjetoCSCGeral",
+        18
+      ],
+      [
+        "ThankYou",
+        15
+      ],
+      [
+        "FallbackServiceNow",
+        8
+      ],
+      [
+        "ProcessosConhecidos",
+        6
+      ],
+      [
+        "Escalate",
+        2
+      ],
+      [
+        "StartOver",
+        1
+      ],
+      [
+        "ModeObraTemporria",
+        1
+      ]
+    ],
+    "top_perguntas": [
+      [
+        "Holerite",
+        68
+      ],
+      [
+        "Remuneração",
+        32
+      ],
+      [
+        "Folha de pagamento",
+        22
+      ],
+      [
+        "Wellhub",
+        14
+      ],
+      [
+        "previdência privada",
+        12
+      ],
+      [
+        "Contra cheque",
+        12
+      ],
+      [
+        "portal rh",
+        10
+      ],
+      [
+        "Manutenção de dependentes",
+        9
+      ],
+      [
+        "Benefícios",
+        9
+      ],
+      [
+        "Nenhuma dessas opções",
+        8
+      ],
+      [
+        "Férias",
+        8
+      ],
+      [
+        "crachá",
+        7
+      ],
+      [
+        "Gmc",
+        7
+      ],
+      [
+        "Contracheque",
+        7
+      ],
+      [
+        "IDEIAS EM AÇÃO",
+        6
+      ],
+      [
+        "Plano odontológico",
+        5
+      ],
+      [
+        "Décimo terceiro",
+        5
+      ],
+      [
+        "licença paternidade",
+        5
+      ],
+      [
+        "ppr",
+        5
+      ],
+      [
+        "Informe de rendimentos",
+        4
+      ]
+    ],
+    "top_palavras_chave": [
+      [
+        "pagamento",
+        161
+      ],
+      [
+        "holerite",
+        159
+      ],
+      [
+        "ferias",
+        156
+      ],
+      [
+        "portal",
+        146
+      ],
+      [
+        "remuneracao",
+        116
+      ],
+      [
+        "plano",
+        102
+      ],
+      [
+        "dias",
+        83
+      ],
+      [
+        "posso",
+        80
+      ],
+      [
+        "previdencia",
+        78
+      ],
+      [
+        "saude",
+        69
+      ],
+      [
+        "link",
+        66
+      ],
+      [
+        "valor",
+        58
+      ],
+      [
+        "solicitar",
+        58
+      ],
+      [
+        "consigo",
+        58
+      ],
+      [
+        "cracha",
+        57
+      ],
+      [
+        "privada",
+        53
+      ],
+      [
+        "folha",
+        53
+      ],
+      [
+        "data",
+        51
+      ],
+      [
+        "pode",
+        48
+      ],
+      [
+        "dependente",
+        47
+      ],
+      [
+        "salario",
+        47
+      ],
+      [
+        "acessar",
+        47
+      ],
+      [
+        "quero",
+        46
+      ],
+      [
+        "acesso",
+        45
+      ],
+      [
+        "consultar",
+        43
+      ]
+    ],
+    "top_fontes_conhecimento": [
+      [
+        "coe_copilotoRh.knowledge.SharePointSearchSource.0",
+        1987
+      ],
+      [
+        "coe_copilotoRh.topic.Diadoferroviario2026aspx_hjknYEr_4Y2xeEjYqcrWu",
+        8
+      ]
+    ],
+    "total_topicos_distintos": 15,
+    "total_acionamentos_topicos": 2643
+  }
+}

@@ -645,18 +645,10 @@ def format_datetime(datetime_str):
 
 st.title("📊 Visualizador de Transcrições de Chat")
 
-CSV_FILES = {
-    "MRS-IA-HML": "conversationtranscripts_hml.csv",
-    "MRS-IA-PROD": "conversationtranscripts_prod.csv",
-}
-
-selected_env = st.sidebar.selectbox("Ambiente", list(CSV_FILES.keys()))
-csv_path = CSV_FILES[selected_env]
-
 # Carregar CSV
 try:
     # Carregar dados com cache (executa só uma vez)
-    df = load_csv_data(csv_path)
+    df = load_csv_data('conversationtranscripts.csv')
     
     # Construir mapa global de IDs (com cache)
     with st.spinner("Construindo índice de mensagens..."):
@@ -726,7 +718,7 @@ try:
             )
     
     # Filtro de Agente
-    agent_column = '_bot_conversationtranscriptid_value@OData.Community.Display.V1.FormattedValue'
+    agent_column = 'bot_conversationtranscriptid.schemaname'
     selected_agent = None
     if agent_column in df.columns:
         # Obter valores únicos da coluna de agentes (ignorando valores nulos)
@@ -857,8 +849,8 @@ try:
             st.info("👈 Selecione uma conversa na lista à esquerda e clique em 'Visualizar Conversa'")
 
 except FileNotFoundError:
-    st.error(f"❌ Arquivo '{csv_path}' não encontrado!")
-    st.info("Execute o script de download: python data_extract/download_conversation_transcripts.py")
+    st.error("❌ Arquivo 'conversationtranscripts.csv' não encontrado!")
+    st.info("Certifique-se de que o arquivo está no mesmo diretório que app.py")
 except Exception as e:
     st.error(f"❌ Erro ao carregar dados: {str(e)}")
     st.exception(e)
