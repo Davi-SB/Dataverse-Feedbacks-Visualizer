@@ -1,7 +1,11 @@
 import streamlit as st
 import pandas as pd
 import json
+import re
+import markdown as markdown_lib
 from datetime import datetime
+from io import BytesIO
+from xhtml2pdf import pisa
 
 debug = True
 
@@ -76,6 +80,46 @@ def build_global_id_map(df_content_series):
     return global_id_map
 
 
+def is_design_mode_conversation(activities):
+    """
+    Indica se a conversa é uma sessão de teste do Copilot Studio (modo design)
+    e não uma interação real de usuário.
+
+    São consideradas de teste as conversas com isDesignMode=True em
+    ConversationInfo ou originadas do canal 'pva-studio'.
+    """
+    for activity in activities:
+        if activity.get('valueType') == 'ConversationInfo':
+            value = activity.get('value') or {}
+            if value.get('isDesignMode') is True:
+                return True
+        if activity.get('channelId') == 'pva-studio':
+            return True
+    return False
+
+
+@st.cache_data(show_spinner=False)
+def compute_design_mode_flags(df_content_series):
+    """
+    Marca, para cada linha do CSV, se ela é uma conversa de teste (modo design).
+    Retorna uma tupla de booleanos alinhada às linhas do CSV.
+    """
+    if debug: print("Identificando conversas em modo design...")
+    flags = []
+
+    for content in df_content_series:
+        try:
+            if pd.isna(content):
+                flags.append(False)
+                continue
+            data = json.loads(content)
+            flags.append(is_design_mode_conversation(data.get('activities', [])))
+        except Exception:
+            flags.append(False)
+
+    return tuple(flags)
+
+
 @st.cache_data(show_spinner=False)
 def compute_feedback_column(df_content_series, _all_feedbacks_map):
     """
@@ -110,9 +154,11 @@ def compute_feedback_column(df_content_series, _all_feedbacks_map):
             # Verificar feedbacks
             has_positive = False
             has_negative = False
+            has_any = False
             for msg_id in message_ids:
                 feedbacks = _all_feedbacks_map.get(msg_id, [])
                 for feedback in feedbacks:
+                    has_any = True
                     reaction = feedback.get('reaction', '')
                     if reaction == 'like':
                         has_positive = True
@@ -123,6 +169,10 @@ def compute_feedback_column(df_content_series, _all_feedbacks_map):
                 feedback_values.append('NEGATIVO')
             elif has_positive:
                 feedback_values.append('POSITIVO')
+            elif has_any:
+                # Reação desconhecida: ainda assim é um feedback e não pode ser
+                # descartado pelo filtro "apenas conversas com feedback".
+                feedback_values.append('OUTRO')
             else:
                 feedback_values.append('')
         except Exception:
@@ -176,52 +226,41 @@ def compute_feedback_count_column(df_content_series, _all_feedbacks_map):
 
 
 @st.cache_data(show_spinner=False)
-def compute_statistics(df_content_series, _all_feedbacks_map):
+def compute_statistics(row_indices, _parsed_json_cache, _all_feedbacks_map, cache_token):
     """
-    Calcula estatísticas de feedbacks uma única vez (cacheado).
-    Retorna: (total_positive, total_negative)
-    
-    IMPORTANTE: Conta TODOS os feedbacks do mapa, não apenas os associados
-    a mensagens encontradas nas linhas filtradas.
+    Conta os feedbacks das conversas indicadas por row_indices.
+    Retorna: (total_positive, total_negative, total_other)
+
+    FONTE ÚNICA DE VERDADE: percorre exatamente as mesmas mensagens que são
+    renderizadas na tela e no PDF (via extract_chat_content), garantindo que
+    a contagem da barra lateral e a do PDF nunca divirjam.
+
+    Antes, a barra lateral contava feedbacks a partir de um CONJUNTO de IDs de
+    mensagem, enquanto o PDF somava as caixas efetivamente renderizadas. Como
+    os dois caminhos percorriam DataFrames com escopos diferentes, os números
+    podiam não bater.
+
+    cache_token identifica o arquivo/ambiente para invalidar o cache ao trocar
+    de CSV (os demais parâmetros com '_' não entram na chave de cache).
     """
-    if debug: print("Calculando estatísticas de feedback...")
+    if debug: print(f"Calculando estatísticas de feedback ({len(row_indices)} conversas)...")
     total_positive = 0
     total_negative = 0
-    
-    # Coletar IDs de mensagens E traces das linhas filtradas
-    all_message_ids = set()
-    for content in df_content_series:
-        try:
-            if pd.isna(content):
-                continue
-            data = json.loads(content)
-            activities = data.get('activities', [])
-            for activity in activities:
-                msg_id = activity.get('id')
-                if not msg_id:
-                    continue
-                # Mensagem tradicional
-                if activity.get('type') == 'message':
-                    all_message_ids.add(msg_id)
-                # Trace/GeneratedAnswer (também pode receber feedback)
-                elif (activity.get('type') == 'trace' and
-                      activity.get('valueType') == 'VariableAssignment' and
-                      activity.get('value', {}).get('name') == 'GeneratedAnswer'):
-                    all_message_ids.add(msg_id)
-        except:
-            continue
-    
-    # Contar feedbacks para os IDs encontrados
-    for msg_id in all_message_ids:
-        feedbacks = _all_feedbacks_map.get(msg_id, [])
-        for feedback in feedbacks:
-            reaction = feedback.get('reaction', '')
-            if reaction == 'like':
-                total_positive += 1
-            elif reaction == 'dislike':
-                total_negative += 1
-    
-    return total_positive, total_negative
+    total_other = 0
+
+    for row_idx in row_indices:
+        messages = extract_chat_content(_parsed_json_cache.get(row_idx), _all_feedbacks_map)
+        for msg in messages:
+            for feedback in msg.get('feedbacks', []):
+                reaction = feedback.get('reaction', '')
+                if reaction == 'like':
+                    total_positive += 1
+                elif reaction == 'dislike':
+                    total_negative += 1
+                else:
+                    total_other += 1
+
+    return total_positive, total_negative, total_other
 
 # CSS customizado para mensagens e feedbacks
 st.markdown("""
@@ -301,12 +340,139 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+# CSS específico para a exportação em PDF (motor xhtml2pdf/reportlab).
+# Não suporta flexbox/box-shadow, por isso usa float para alinhar o horário.
+PDF_CSS = """
+<style>
+    @page {
+        size: A4;
+        margin: 1.6cm;
+    }
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10pt;
+        color: #000;
+    }
+    h1 {
+        font-size: 18pt;
+        color: #333;
+    }
+    .conversation-section {
+        margin-bottom: 16px;
+    }
+    .page-break {
+        page-break-after: always;
+    }
+    .row-number {
+        background-color: #FFF3E0;
+        border: 2px solid #FF9800;
+        padding: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 13pt;
+        color: #E65100;
+    }
+    .conversation-meta {
+        font-size: 9pt;
+        color: #555;
+        margin-bottom: 10px;
+    }
+    .message-user, .message-bot, .message-feedback-positive, .message-feedback-negative {
+        padding: 10px;
+        margin: 6px 0;
+        border-radius: 6px;
+    }
+    .message-user {
+        background-color: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-left: 4px solid #666666;
+    }
+    .message-bot {
+        background-color: #E3F2FD;
+        border-left: 4px solid #2196F3;
+    }
+    .message-feedback-positive {
+        background-color: #C8E6C9;
+        border-left: 4px solid #4CAF50;
+        margin-left: 20px;
+    }
+    .message-feedback-negative {
+        background-color: #FFCDD2;
+        border-left: 4px solid #F44336;
+        margin-left: 20px;
+    }
+    .msg-header {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    table.msg-header-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table.msg-header-table td {
+        padding: 6px 0;
+        border: none;
+        vertical-align: middle;
+    }
+    .msg-header-left {
+        text-align: left;
+    }
+    .msg-header-right {
+        text-align: right;
+        font-weight: normal;
+        font-size: 8pt;
+        color: #666;
+        white-space: nowrap;
+    }
+    .msg-text {
+        color: #000;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
+    .msg-text p {
+        margin: 0 0 6px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
+    .msg-text p:last-child {
+        margin-bottom: 0;
+    }
+    .msg-text a {
+        color: #1565C0;
+    }
+    .msg-text ul, .msg-text ol {
+        margin: 4px 0;
+        padding-left: 18px;
+    }
+    .no-messages {
+        color: #999;
+        font-style: italic;
+        padding: 10px;
+    }
+    .badge {
+        font-size: 7pt;
+        padding: 1px 5px;
+        border-radius: 3px;
+        color: white;
+        margin-left: 6px;
+    }
+</style>
+"""
+
+
 @st.cache_data(show_spinner=False)
-def load_all_feedbacks(df_content_series, _global_id_map):
+def load_all_feedbacks(df_content_series, _global_id_map, design_flags):
     """
     Carrega TODOS os feedbacks de TODAS as linhas do CSV.
-    Retorna um dicionário mapeando message_id -> lista de feedbacks.
-    
+    Retorna: (all_feedbacks, orphan_count)
+      - all_feedbacks: dicionário mapeando message_id -> lista de feedbacks
+      - orphan_count: feedbacks que não puderam ser associados a nenhuma mensagem
+
     LÓGICA DE BUSCA (em ordem de prioridade):
     1. BUSCA GLOBAL POR ID: Usa o mapa global para encontrar o ID em QUALQUER linha
     2. BUSCA TEMPORAL (Heurística): Para IDs não encontrados, busca a mensagem de BOT 
@@ -317,13 +483,23 @@ def load_all_feedbacks(df_content_series, _global_id_map):
     
     NOTA: messageReaction não é capturado porque no dataset atual não contém 
     informação sobre o tipo de reação (like/dislike), apenas que houve interação.
+
+    Conversas de teste (modo design) são ignoradas para que feedbacks dados
+    durante testes não contaminem as métricas de uso real.
+
+    Um feedback fica órfão quando seu replyToId aponta para uma mensagem que não
+    existe em nenhuma linha do CSV (conversa de origem não exportada) e não há
+    mensagem de bot anterior na mesma linha para servir de âncora.
     """
     if debug: print("Carregando todos os feedbacks...")
     all_feedbacks = {}  # {message_id: [lista de feedbacks]}
+    orphan_count = 0
     
     for idx, content in enumerate(df_content_series):
         try:
             if pd.isna(content):
+                continue
+            if idx < len(design_flags) and design_flags[idx]:
                 continue
             data = json.loads(content)
             activities = data.get('activities', [])
@@ -386,11 +562,13 @@ def load_all_feedbacks(df_content_series, _global_id_map):
                             feedback_data = value.get('actionValue', {}).copy()
                             feedback_data['_metodo_identificacao'] = metodo
                             all_feedbacks[found_msg_id].append(feedback_data)
+                        else:
+                            orphan_count += 1
                         
         except Exception:
             continue
     
-    return all_feedbacks
+    return all_feedbacks, orphan_count
 
 
 def extract_feedback_column(json_string, all_feedbacks_map, _global_id_map):
@@ -628,6 +806,225 @@ def render_chat_message(msg):
             st.markdown(feedback_html, unsafe_allow_html=True)
 
 
+def _break_long_tokens(text, max_len=45):
+    """
+    Insere pontos de quebra dentro de tokens muito longos sem espaços
+    (ex: URLs), permitindo que o motor de PDF (xhtml2pdf) quebre a linha.
+    Sem isso, textos como links longos vazam para fora da caixa da mensagem
+    (o motor de PDF usado não trata corretamente CSS word-break/wbr/zero-width
+    space para forçar a quebra de uma palavra única muito longa).
+    """
+    def _break_token(match):
+        token = match.group(0)
+        if len(token) <= max_len:
+            return token
+        return ' '.join(token[i:i + max_len] for i in range(0, len(token), max_len))
+
+    return re.sub(r'\S+', _break_token, text)
+
+
+def render_markdown_for_pdf(text):
+    """
+    Converte texto (possivelmente em Markdown, como as respostas do bot)
+    em HTML, para que negrito/itálico/links/listas fiquem visualmente
+    equivalentes ao que é exibido em tela pelo st.markdown.
+    """
+    if not text:
+        return ""
+    try:
+        text = _break_long_tokens(str(text))
+        return markdown_lib.markdown(text, extensions=['nl2br'])
+    except Exception:
+        return str(text)
+
+
+def build_message_html_for_pdf(msg):
+    """
+    Constrói o HTML de uma mensagem (e seus feedbacks) para o PDF exportado.
+    Segue a mesma estrutura visual da tela, mas usando apenas CSS compatível
+    com o motor de geração de PDF (xhtml2pdf) - por exemplo, uma tabela no
+    lugar de flexbox para alinhar o horário à direita do cabeçalho.
+    """
+    msg_class = "message-user" if msg['is_user'] else "message-bot"
+    emoji = "👤" if msg['is_user'] else "🤖"
+    role = "USUÁRIO" if msg['is_user'] else "BOT"
+
+    aad_id = msg.get('aadObjectId', '')
+    role_display = f"{role} <span style='font-size:8pt; color:#888;'>({aad_id})</span>" if aad_id else role
+
+    header_table = f"""
+    <table class="msg-header-table"><tr>
+        <td class="msg-header-left">{emoji} {role_display}</td>
+        <td class="msg-header-right">{msg['time']}</td>
+    </tr></table>
+    """
+
+    parts = [f"""
+    <div class="{msg_class}">
+        <div class="msg-header">{header_table}</div>
+        <div class="msg-text">{render_markdown_for_pdf(msg['text'])}</div>
+    </div>
+    """]
+
+    feedbacks = msg.get('feedbacks', [])
+    if feedbacks:
+        for idx, feedback in enumerate(feedbacks, 1):
+            reaction = feedback.get('reaction', '')
+            feedback_text = extract_feedback_text(feedback)
+
+            if reaction == 'like':
+                feedback_class = "message-feedback-positive"
+                emoji_fb = "✅"
+                label = "FEEDBACK POSITIVO"
+            else:
+                feedback_class = "message-feedback-negative"
+                emoji_fb = "❌"
+                label = "FEEDBACK NEGATIVO"
+
+            counter_text = f" #{idx}" if len(feedbacks) > 1 else ""
+
+            metodo = feedback.get('_metodo_identificacao', 'ID')
+            if metodo == 'ID':
+                badge = '<span class="badge" style="background-color:#1976D2;">ID</span>'
+            elif metodo == 'ID_CROSS':
+                badge = '<span class="badge" style="background-color:#9C27B0;">ID (outra linha)</span>'
+            else:
+                badge = '<span class="badge" style="background-color:#FF9800;">TEMPO</span>'
+
+            parts.append(f"""
+            <div class="{feedback_class}">
+                <div class="msg-header">{emoji_fb} {label}{counter_text}{badge}</div>
+                <div class="msg-text">{render_markdown_for_pdf(feedback_text)}</div>
+            </div>
+            """)
+
+    return "".join(parts)
+
+
+def build_conversation_section_html(row_idx, messages, conversation_date=None, add_page_break=True):
+    """
+    Constrói a seção HTML de uma conversa para o PDF exportado.
+
+    O identificador da conversa (e, portanto, dos feedbacks nela contidos)
+    é o próprio número da linha (índice 0-based do arquivo original),
+    exibido como "LINHA #{row_idx}" - igual ao usado na visualização em tela.
+    """
+    header_html = f'<div class="row-number"> #{row_idx}</div>'
+
+    meta_parts = []
+    if conversation_date:
+        meta_parts.append(f"<b>Data da conversa:</b> {conversation_date}")
+    if messages:
+        meta_parts.append(f"Total de mensagens: {len(messages)}")
+
+    meta_html = f'<div class="conversation-meta">{" &nbsp;|&nbsp; ".join(meta_parts)}</div>' if meta_parts else ""
+
+    if messages:
+        messages_html = "".join(build_message_html_for_pdf(msg) for msg in messages)
+    else:
+        messages_html = '<div class="no-messages">Nenhuma mensagem encontrada nesta conversa.</div>'
+
+    section_class = "conversation-section page-break" if add_page_break else "conversation-section"
+    return f'<div class="{section_class}">{header_html}{meta_html}{messages_html}</div>'
+
+
+def generate_conversations_pdf(df_export, parsed_json_cache, all_feedbacks_map, context_info=None):
+    """
+    Gera um PDF visualmente semelhante à visualização de conversa em tela,
+    contendo todas as linhas presentes em df_export (já filtradas pelos
+    controles da barra lateral).
+
+    IMPORTANTE: o ID usado para identificar cada conversa (e os feedbacks
+    nela contidos) no PDF é o próprio número da linha (0-based) do arquivo
+    original - o mesmo índice usado na visualização em tela ("LINHA #{idx}").
+
+    A contagem de feedbacks impressa na capa é obtida da MESMA travessia usada
+    para renderizar as conversas, e por isso é sempre idêntica à exibida na
+    barra lateral (que cobre exatamente este mesmo conjunto de conversas).
+
+    Retorna: (pdf_bytes, error_message). Em caso de sucesso, error_message é None.
+    """
+    if debug: print(f"Gerando PDF para {len(df_export)} conversa(s)...")
+
+    context_info = context_info or {}
+    generated_at = datetime.now().strftime('%d/%m/%Y')
+
+    row_indices = list(df_export.index)
+    dates_by_row = context_info.get('datas_por_linha') or {}
+
+    sections = []
+    total_positive = 0
+    total_negative = 0
+    total_other = 0
+
+    for i, row_idx in enumerate(row_indices):
+        parsed_data = parsed_json_cache.get(row_idx)
+        messages = extract_chat_content(parsed_data, all_feedbacks_map)
+
+        for msg in messages:
+            for feedback in msg.get('feedbacks', []):
+                reaction = feedback.get('reaction', '')
+                if reaction == 'like':
+                    total_positive += 1
+                elif reaction == 'dislike':
+                    total_negative += 1
+                else:
+                    total_other += 1
+
+        is_last = (i == len(row_indices) - 1)
+        sections.append(build_conversation_section_html(
+            row_idx,
+            messages,
+            conversation_date=dates_by_row.get(row_idx),
+            add_page_break=not is_last
+        ))
+
+    context_lines = [f"<b>Gerado em:</b> {generated_at}"]
+    if context_info.get('ambiente'):
+        context_lines.append(f"<b>Ambiente:</b> {context_info['ambiente']}")
+    if context_info.get('agente'):
+        context_lines.append(f"<b>Agente:</b> {context_info['agente']}")
+    if context_info.get('data_inicial'):
+        context_lines.append(f"<b>Conversas desde:</b> {context_info['data_inicial']}")
+    if context_info.get('apenas_com_feedback'):
+        context_lines.append("<b>Filtro:</b> Apenas conversas com feedback")
+    context_lines.append("<b>Conversas de teste (modo design):</b> excluídas")
+    context_lines.append(f"<b>Total de conversas exportadas:</b> {len(df_export)}")
+
+    total_feedbacks = total_positive + total_negative + total_other
+    context_lines.append(f"<b>Feedbacks positivos:</b> {total_positive}")
+    context_lines.append(f"<b>Feedbacks negativos:</b> {total_negative}")
+    if total_other:
+        context_lines.append(f"<b>Feedbacks sem reação identificada:</b> {total_other}")
+    context_lines.append(f"<b>Total de feedbacks:</b> {total_feedbacks}")
+
+    cover_html = f"""
+    <div class="conversation-section page-break">
+        <h1>Exportação de Transcrições de Chat</h1>
+        <p>{'<br/>'.join(context_lines)}</p>
+    </div>
+    """
+
+    full_html = f"""
+    <html>
+    <head>{PDF_CSS}</head>
+    <body>
+        {cover_html}
+        {''.join(sections)}
+    </body>
+    </html>
+    """
+
+    try:
+        buffer = BytesIO()
+        result = pisa.CreatePDF(src=full_html, dest=buffer)
+        if result.err:
+            return None, "Erro ao converter HTML em PDF."
+        return buffer.getvalue(), None
+    except Exception as e:
+        return None, str(e)
+
+
 def format_datetime(datetime_str):
     """
     Formata datetime para AAAA/MM/DD
@@ -639,6 +1036,24 @@ def format_datetime(datetime_str):
         return datetime_str
 
 
+def format_conversation_datetime(datetime_str):
+    """
+    Formata a data/hora de início da conversa para DD/MM/AAAA HH:MM (exibida no PDF).
+
+    Trata os dois formatos presentes nos CSVs exportados do Dataverse:
+    '2026-06-24T12:55:42Z' e '2026-05-27 13:13:48.0000000'.
+    """
+    if datetime_str is None or (isinstance(datetime_str, float) and pd.isna(datetime_str)):
+        return ""
+    try:
+        dt = pd.to_datetime(datetime_str, errors='coerce')
+        if pd.isna(dt):
+            return str(datetime_str)
+        return dt.strftime('%d/%m/%Y %H:%M')
+    except Exception:
+        return str(datetime_str)
+
+
 # ============================================================================
 # APLICAÇÃO PRINCIPAL
 # ============================================================================
@@ -648,6 +1063,7 @@ st.title("📊 Visualizador de Transcrições de Chat")
 CSV_FILES = {
     "MRS-IA-HML": "conversationtranscripts_hml.csv",
     "MRS-IA-PROD": "conversationtranscripts_prod.csv",
+    "MRS-IA-SANDBOX": "conversationtranscripts_sandbox.csv",
 }
 
 selected_env = st.sidebar.selectbox("Ambiente", list(CSV_FILES.keys()))
@@ -662,19 +1078,23 @@ try:
     with st.spinner("Construindo índice de mensagens..."):
         global_id_map = build_global_id_map(tuple(df['content'].tolist()))
     
-    # Carregar TODOS os feedbacks do CSV (com cache)
+    # Identificar conversas de teste (modo design) - com cache
+    content_tuple = tuple(df['content'].tolist())
+    design_flags = compute_design_mode_flags(content_tuple)
+
+    # Carregar TODOS os feedbacks do CSV (com cache), ignorando conversas de teste
     with st.spinner("Carregando feedbacks..."):
-        all_feedbacks_global = load_all_feedbacks(
-            tuple(df['content'].tolist()), 
-            global_id_map
+        all_feedbacks_global, orphan_feedbacks = load_all_feedbacks(
+            content_tuple,
+            global_id_map,
+            design_flags
         )
     
     # Parsear todos os JSONs (com cache) para visualização rápida
     with st.spinner("Preparando dados..."):
-        parsed_json_cache = parse_all_json_content(tuple(df['content'].tolist()))
+        parsed_json_cache = parse_all_json_content(content_tuple)
     
     # Adicionar coluna de feedback (CACHEADO)
-    content_tuple = tuple(df['content'].tolist())
     df['feedback'] = compute_feedback_column(content_tuple, all_feedbacks_global)
     
     # Adicionar coluna de contagem de feedbacks (CACHEADO)
@@ -685,6 +1105,13 @@ try:
         df['conversationstarttime_formatted'] = df['conversationstarttime'].apply(format_datetime)
         # Criar coluna de data (sem hora) para filtro
         df['conversation_date'] = pd.to_datetime(df['conversationstarttime'], errors='coerce').dt.date
+
+    # Remover conversas de teste (modo design) de TODAS as visões: lista,
+    # estatísticas e exportação em PDF. O índice original das linhas é
+    # preservado, pois é a chave usada em parsed_json_cache.
+    df['is_design_mode'] = list(design_flags)
+    total_design_mode = int(df['is_design_mode'].sum())
+    df = df[~df['is_design_mode']]
     
     # ========================================================================
     # SIDEBAR - CONTROLES
@@ -694,7 +1121,8 @@ try:
     
     # Seleção de colunas visíveis
     st.sidebar.subheader("Colunas Visíveis")
-    all_columns = [col for col in df.columns if col != 'conversationstarttime']
+    all_columns = [col for col in df.columns
+                   if col not in ('conversationstarttime', 'is_design_mode')]
     
     # Colunas padrão visíveis
     default_visible = ['feedback', 'feedback_count', 'content']
@@ -742,23 +1170,34 @@ try:
             help="Filtra conversas por agente específico"
         )
     
+    # ========================================================================
+    # CONJUNTO FILTRADO ÚNICO
+    # Lista, estatísticas da barra lateral e PDF usam EXATAMENTE este conjunto,
+    # para que as contagens exibidas e exportadas nunca divirjam.
+    # ========================================================================
+    df_filtered = df.copy()
+
+    if only_with_feedback:
+        df_filtered = df_filtered[df_filtered['feedback'] != '']
+
+    if 'conversation_date' in df.columns and pd.notna(min_date) and pd.notna(max_date):
+        df_filtered = df_filtered[df_filtered['conversation_date'] >= selected_date]
+
+    if selected_agent and selected_agent != '<All>' and agent_column in df.columns:
+        df_filtered = df_filtered[df_filtered[agent_column] == selected_agent]
+
     # Painel de estatísticas (CACHEADO)
     st.sidebar.subheader("📈 Estatísticas")
-    
-    # Aplicar filtro de data para estatísticas
-    df_stats = df.copy()
-    if 'conversation_date' in df.columns and pd.notna(min_date) and pd.notna(max_date):
-        df_stats = df_stats[df_stats['conversation_date'] >= selected_date]
-    
-    # Aplicar filtro de agente para estatísticas
-    if selected_agent and selected_agent != '<All>' and agent_column in df.columns:
-        df_stats = df_stats[df_stats[agent_column] == selected_agent]
-    
-    # Usar função cacheada para calcular estatísticas
-    stats_content_tuple = tuple(df_stats['content'].tolist())
-    total_positive, total_negative = compute_statistics(stats_content_tuple, all_feedbacks_global)
-    
-    total_conversations = len(df_stats)
+
+    total_positive, total_negative, total_other = compute_statistics(
+        tuple(df_filtered.index),
+        parsed_json_cache,
+        all_feedbacks_global,
+        csv_path
+    )
+
+    total_feedbacks = total_positive + total_negative + total_other
+    total_conversations = len(df_filtered)
     
     MESES_PT = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun',
                 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
@@ -766,11 +1205,24 @@ try:
     st.sidebar.metric(f"Total de Conversas (desde {label_date})", total_conversations)
     st.sidebar.metric("✅ Feedbacks Positivos", total_positive)
     st.sidebar.metric("❌ Feedbacks Negativos", total_negative)
-    st.sidebar.metric("📈 Total de Feedbacks", total_positive + total_negative)
+    if total_other:
+        st.sidebar.metric("❔ Feedbacks sem reação", total_other)
+    st.sidebar.metric("📈 Total de Feedbacks", total_feedbacks)
     
     if total_positive + total_negative > 0:
         percentual_positivo = (total_positive / (total_positive + total_negative)) * 100
         st.sidebar.metric("Percentual Positivo", f"{percentual_positivo:.1f}%")
+
+    if total_design_mode:
+        st.sidebar.caption(
+            f"🧪 {total_design_mode} conversa(s) de teste (modo design) excluídas "
+            "das contagens e da exportação."
+        )
+    if orphan_feedbacks:
+        st.sidebar.caption(
+            f"⚠️ {orphan_feedbacks} feedback(s) não puderam ser associados a nenhuma "
+            "mensagem do CSV (conversa de origem não exportada) e ficam fora do total."
+        )
     
     # ========================================================================
     # LAYOUT PRINCIPAL - 2 COLUNAS
@@ -781,18 +1233,8 @@ try:
     with col_left:
         st.header("📋 Lista de Conversas")
         
-        # Aplicar filtro
-        df_display = df.copy()
-        if only_with_feedback:
-            df_display = df_display[df_display['feedback'] != '']
-        
-        # Aplicar filtro de data
-        if 'conversation_date' in df.columns and pd.notna(min_date) and pd.notna(max_date):
-            df_display = df_display[df_display['conversation_date'] >= selected_date]
-        
-        # Aplicar filtro de agente
-        if selected_agent and selected_agent != '<All>' and agent_column in df.columns:
-            df_display = df_display[df_display[agent_column] == selected_agent]
+        # Mesmo conjunto usado nas estatísticas da barra lateral e no PDF
+        df_display = df_filtered.copy()
         
         # Garantir que 'feedback' esteja nas colunas visíveis
         if 'feedback' not in visible_columns and len(visible_columns) > 0:
@@ -810,16 +1252,70 @@ try:
                 hide_index=True
             )
             
+            # ================================================================
+            # EXPORTAÇÃO PARA PDF - exporta a seleção/filtragem atual
+            # ================================================================
+            st.markdown("---")
+            col_export_btn, col_export_download = st.columns([1, 1])
+            
+            with col_export_btn:
+                export_clicked = st.button(
+                    "📄 Exportar conversas para PDF",
+                    help="Exporta todas as conversas filtradas (visíveis na tabela acima) para um PDF, no mesmo formato visual usado ao visualizar uma conversa."
+                )
+            
+            if export_clicked:
+                if len(df_display) == 0:
+                    st.warning("Nenhuma conversa para exportar com os filtros atuais.")
+                else:
+                    with st.spinner(f"Gerando PDF com {len(df_display)} conversa(s)..."):
+                        pdf_bytes, pdf_error = generate_conversations_pdf(
+                            df_display,
+                            parsed_json_cache,
+                            all_feedbacks_global,
+                            context_info={
+                                'ambiente': selected_env,
+                                'agente': selected_agent if selected_agent and selected_agent != '<All>' else 'Todos',
+                                'data_inicial': locals().get('selected_date').strftime('%d/%m/%Y') if locals().get('selected_date') else None,
+                                'apenas_com_feedback': only_with_feedback,
+                                'datas_por_linha': {
+                                    idx: format_conversation_datetime(valor)
+                                    for idx, valor in df_display['conversationstarttime'].items()
+                                } if 'conversationstarttime' in df_display.columns else {},
+                            }
+                        )
+                    
+                    if pdf_error:
+                        st.error(f"❌ Erro ao gerar PDF: {pdf_error}")
+                    else:
+                        st.session_state['pdf_export_bytes'] = pdf_bytes
+                        st.session_state['pdf_export_filename'] = (
+                            f"conversas_{selected_env}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+                        )
+                        st.success(f"✅ PDF gerado com {len(df_display)} conversa(s)!")
+            
+            if 'pdf_export_bytes' in st.session_state:
+                with col_export_download:
+                    st.download_button(
+                        label="⬇️ Baixar PDF",
+                        data=st.session_state['pdf_export_bytes'],
+                        file_name=st.session_state.get('pdf_export_filename', 'conversas.pdf'),
+                        mime="application/pdf"
+                    )
+            
             # Seletor de linha
             st.subheader("Selecione uma conversa para visualizar")
             
             col_input, col_spacer = st.columns([1, 2])
             
             with col_input:
+                # O '#' exibido é o índice original do CSV, que não é contíguo
+                # após a remoção das conversas de teste - por isso o limite é o
+                # maior índice existente, e não a quantidade de linhas.
                 selected_index = st.number_input(
                     "Digite o número da linha (#):",
                     min_value=0,
-                    max_value=len(df)-1,
+                    max_value=int(df.index.max()) if len(df) else 0,
                     value=0,
                     step=1
                 )

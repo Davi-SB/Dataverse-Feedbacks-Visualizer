@@ -3,3 +3,5 @@ pandas
 openpyxl
 msal
 requests
+xhtml2pdf
+markdown

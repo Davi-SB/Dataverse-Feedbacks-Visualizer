@@ -1,0 +1,3039 @@
+{
+    "activities": [
+      {
+        "valueType": "ConversationInfo",
+        "type": "trace",
+        "timestamp": 1784804614,
+        "timestampMs": 1784804614873,
+        "from": {
+          "id": "",
+          "role": 0
+        },
+        "value": {
+          "isDesignMode": false,
+          "locale": "pt-BR"
+        }
+      },
+      {
+        "id": "1784804614851",
+        "type": "message",
+        "timestamp": 1784804614,
+        "timestampMs": 1784804614873,
+        "from": {
+          "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+          "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+          "role": 1
+        },
+        "channelId": "msteams",
+        "textFormat": "plain",
+        "text": "me explica o funcionamento do sistema tmds",
+        "attachments": [
+          {
+            "contentType": "text/html",
+            "content": "<p>me explica o funcionamento do sistema tmds</p>"
+          }
+        ],
+        "channelData": {
+          "tenant": {
+            "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+          }
+        }
+      },
+      {
+        "id": "95c929c3-880e-4ab0-b178-6f4edeb64811",
+        "type": "message",
+        "timestamp": 1784804618,
+        "timestampMs": 1784804618774,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "channelId": "msteams",
+        "attachments": [
+          {
+            "contentType": "application/vnd.microsoft.card.oauth",
+            "content": {
+              "tokenExchangeResource": {
+                "id": "2cc6b86e-6064-43aa-b7f7-402225fe22d0",
+                "uri": "96ff4394-9197-43aa-b393-6a41652e21f8"
+              },
+              "buttons": []
+            }
+          }
+        ],
+        "replyToId": "1784804614851",
+        "channelData": {
+          "feedbackLoop": {
+            "type": "default"
+          }
+        }
+      },
+      {
+        "id": "f:fad6c70f-a2de-fe0e-ee42-b8bca414a0d1",
+        "type": "invoke",
+        "timestamp": 1784804623,
+        "timestampMs": 1784804623305,
+        "from": {
+          "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+          "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+          "role": 1
+        },
+        "name": "signin/tokenExchange",
+        "channelId": "msteams",
+        "attachments": [],
+        "channelData": {
+          "tenant": {
+            "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+          },
+          "source": {
+            "name": "message"
+          }
+        }
+      },
+      {
+        "id": "7d9d8729-17e9-49f7-918e-51d6a48a1fec",
+        "type": "invokeResponse",
+        "timestamp": 1784804624,
+        "timestampMs": 1784804624314,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "f:fad6c70f-a2de-fe0e-ee42-b8bca414a0d1",
+        "value": {
+          "status": 200
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "a4476ff9-22fa-40c8-a859-ba098abd1989",
+        "type": "event",
+        "timestamp": 1784804632,
+        "timestampMs": 1784804632740,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c"
+        }
+      },
+      {
+        "id": "a6590652-bd03-4966-aa4a-f354ae670507",
+        "type": "event",
+        "timestamp": 1784804632,
+        "timestampMs": 1784804632740,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "summary": "",
+          "ask": "me explica o funcionamento do sistema tmds",
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "0b11b052-4ca9-4ccc-a9ba-6e82b176e6aa",
+        "type": "event",
+        "timestamp": 1784804632,
+        "timestampMs": 1784804632743,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "stepId": "1e3b4544-2f17-4c09-965c-e9bfecdfa4ef",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The user is asking about the TMDS system. Let me search for this information.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "7360f671-4ecd-4007-8466-65a9a0d0eb99",
+        "type": "event",
+        "timestamp": 1784804632,
+        "timestampMs": 1784804632754,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "1e3b4544-2f17-4c09-965c-e9bfecdfa4ef",
+          "arguments": {
+            "search_keywords": "TMDS, funcionamento, sistema, telemetria, medição dinâmica, descrição",
+            "enable_summarization": false,
+            "search_query": "Como funciona o sistema TMDS? Descrição e funcionamento do sistema TMDS ferroviário."
+          },
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "4371b2ee-8f0f-4340-a467-a4fe9036c78e",
+        "type": "event",
+        "timestamp": 1784804637,
+        "timestampMs": 1784804637929,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804614851",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "Como funciona o sistema TMDS? Descrição e funcionamento do sistema TMDS ferroviário.",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "como"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "funciona"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "o"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "sistema"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tmds"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "descricao"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "e"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "funcionamento"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "do"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "ferroviario"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tmds"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "funcionamento"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "sistema"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "telemetria"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "medicao"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "dinamica"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "descricao"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "TMDS funcionamento sistema telemetria medição dinâmica descrição"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "cf1d10bf-00b6-41e3-9680-c8b77e592eb7",
+        "type": "event",
+        "timestamp": 1784804637,
+        "timestampMs": 1784804637940,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "1e3b4544-2f17-4c09-965c-e9bfecdfa4ef",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:05.1977645",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "b9e0d988-0df6-4a38-9707-f44c99353dd9",
+        "type": "event",
+        "timestamp": 1784804644,
+        "timestampMs": 1784804644391,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c"
+        }
+      },
+      {
+        "id": "4c03b39f-252c-4f3d-8f28-e69580e928b6",
+        "type": "event",
+        "timestamp": 1784804644,
+        "timestampMs": 1784804644391,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "summary": "",
+          "ask": "me explica o funcionamento do sistema tmds",
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "1f0da425-c830-4245-8db7-6bcf0f34a3b4",
+        "type": "event",
+        "timestamp": 1784804644,
+        "timestampMs": 1784804644393,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "stepId": "ed38ee8e-a135-43d8-a8fc-5c8acc06298d",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The search returned null. Let me try a different search.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "458785be-8fe5-490b-b270-f876cad7bcb9",
+        "type": "event",
+        "timestamp": 1784804644,
+        "timestampMs": 1784804644402,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "ed38ee8e-a135-43d8-a8fc-5c8acc06298d",
+          "arguments": {
+            "search_keywords": "TMDS, CBTC, TWE, sinalização ferroviária, sistema monitoramento, descrição técnica",
+            "enable_summarization": false,
+            "search_query": "o que é TMDS ferroviário MRS funcionamento técnico"
+          },
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "491c7ac5-9971-41d3-b9f0-c61c7d6f6689",
+        "type": "event",
+        "timestamp": 1784804646,
+        "timestampMs": 1784804646506,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804614851",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "o que é TMDS ferroviário MRS funcionamento técnico",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "o"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "que"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "e"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tmds"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "ferroviario"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mrs"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "funcionamento"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tecnico"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tmds"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "cbtc"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "twe"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "sinalizacao"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "ferroviaria"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "sistema"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "monitoramento"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "descricao"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tecnica"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "TMDS CBTC TWE sinalização ferroviária sistema monitoramento descrição técnica"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "4927ce25-16c8-42ac-83e8-52049da92022",
+        "type": "event",
+        "timestamp": 1784804646,
+        "timestampMs": 1784804646514,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "ed38ee8e-a135-43d8-a8fc-5c8acc06298d",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:02.1216294",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "2c126ffc-1517-48cd-bd06-be88ad664fb9",
+        "type": "event",
+        "timestamp": 1784804653,
+        "timestampMs": 1784804653315,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c"
+        }
+      },
+      {
+        "id": "da8e98d1-c422-48e9-81cd-ee06e4327fb0",
+        "type": "event",
+        "timestamp": 1784804653,
+        "timestampMs": 1784804653315,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "summary": "",
+          "ask": "me explica o funcionamento do sistema tmds",
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "f0ae7aa5-9635-4eff-84be-ecfd8c5c9089",
+        "type": "event",
+        "timestamp": 1784804653,
+        "timestampMs": 1784804653319,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "stepId": "ccdad42c-5495-418c-8252-2b442dcd2b55",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The search tool is still returning null. Let me try one more search with different keywords.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "be9d236b-6626-4dce-9b4c-4d9796746593",
+        "type": "event",
+        "timestamp": 1784804653,
+        "timestampMs": 1784804653330,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "ccdad42c-5495-418c-8252-2b442dcd2b55",
+          "arguments": {
+            "search_keywords": "TMDS ferroviário, sistema de medição dinâmica",
+            "enable_summarization": false,
+            "search_query": "TMDS sistema ferroviário MRS explicação"
+          },
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "3dd9c6fa-63b8-4995-b3a0-d506d3e585d3",
+        "type": "event",
+        "timestamp": 1784804655,
+        "timestampMs": 1784804655244,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804614851",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "TMDS sistema ferroviário MRS explicação",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tmds"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "sistema"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "ferroviario"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mrs"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "explicacao"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tmds"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "ferroviario"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "sistema"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "medicao"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "dinamica"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "TMDS ferroviário sistema de medição dinâmica"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "122e65b3-c019-4368-a6ed-d32b18bacb39",
+        "type": "event",
+        "timestamp": 1784804655,
+        "timestampMs": 1784804655249,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "ccdad42c-5495-418c-8252-2b442dcd2b55",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "3d15fe7b-8052-4f01-a3fb-458c3ad22b2c",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:01.9324040",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "UnknownIntent",
+        "id": "57aff0fedc60410092beb283989a6130",
+        "type": "trace",
+        "timestamp": 1784804673,
+        "timestampMs": 1784804673746,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804614851",
+        "value": {
+          "userQuery": "me explica o funcionamento do sistema tmds"
+        }
+      },
+      {
+        "valueType": "VariableAssignment",
+        "id": "687b39713171431a9dfec01693d5c7bc",
+        "type": "trace",
+        "timestamp": 1784804679,
+        "timestampMs": 1784804679583,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804614851",
+        "value": {
+          "name": "Answer",
+          "id": "Topic.Answer",
+          "newValue": "",
+          "type": "local"
+        }
+      },
+      {
+        "valueType": "KnowledgeTraceData",
+        "id": "8cd836c4e0574e7aa44bebe3105b9afa",
+        "type": "trace",
+        "timestamp": 1784804679,
+        "timestampMs": 1784804679583,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804614851",
+        "value": {
+          "completionState": "NoSearchResults",
+          "isKnowledgeSearched": true,
+          "citedKnowledgeSources": [],
+          "failedKnowledgeSourcesTypes": []
+        }
+      },
+      {
+        "valueType": "GPTAnswer",
+        "id": "8f3bb32ef26a4469939e8fd80e3c14b3",
+        "type": "trace",
+        "timestamp": 1784804679,
+        "timestampMs": 1784804679583,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804614851",
+        "value": {
+          "gptAnswerState": "No Search Results"
+        }
+      },
+      {
+        "id": "382d162a-b8b7-4aba-b2d6-13f4e3e5eef0",
+        "type": "message",
+        "timestamp": 1784804679,
+        "timestampMs": 1784804679581,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "channelId": "msteams",
+        "textFormat": "markdown",
+        "text": "Não sei como ajudar. Você pode tentar reformular a pergunta?",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "channelData": {
+          "feedbackLoop": {
+            "type": "default"
+          }
+        }
+      },
+      {
+        "id": "721acfca-8631-422e-9d8e-b9a39997017c",
+        "type": "message",
+        "timestamp": 1784804802,
+        "timestampMs": 1784804802628,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "channelId": "msteams",
+        "textFormat": "markdown",
+        "text": "Conversa encerrada devido inatividade.",
+        "attachments": [],
+        "replyToId": "1784804614851",
+        "channelData": {
+          "feedbackLoop": {
+            "type": "default"
+          }
+        }
+      },
+      {
+        "id": "1784804841349",
+        "type": "message",
+        "timestamp": 1784804841,
+        "timestampMs": 1784804841370,
+        "from": {
+          "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+          "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+          "role": 1
+        },
+        "channelId": "msteams",
+        "textFormat": "plain",
+        "text": "o que pode deixar uma mch inoperante?",
+        "attachments": [
+          {
+            "contentType": "text/html",
+            "content": "<p>o que pode deixar uma mch inoperante?</p>"
+          }
+        ],
+        "channelData": {
+          "tenant": {
+            "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+          }
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "c7955b62-83ba-4e7a-8df5-063f83dd2482",
+        "type": "event",
+        "timestamp": 1784804851,
+        "timestampMs": 1784804851304,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf"
+        }
+      },
+      {
+        "id": "3c413b5e-250e-4745-85cb-725ed0808620",
+        "type": "event",
+        "timestamp": 1784804851,
+        "timestampMs": 1784804851304,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "summary": "",
+          "ask": "o que pode deixar uma mch inoperante?",
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "de99e961-6e52-43f3-8d87-566759d5c883",
+        "type": "event",
+        "timestamp": 1784804851,
+        "timestampMs": 1784804851306,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "stepId": "902b9e3a-8559-4b62-8e4d-1b25248d5f17",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The user is asking about what can make a MCH (Máquina de Chave - switch machine) inoperant. Let me search the RASF and technical documentation for this information.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "28a5b246-493c-4b18-977d-7f36fa80890e",
+        "type": "event",
+        "timestamp": 1784804851,
+        "timestampMs": 1784804851312,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "902b9e3a-8559-4b62-8e4d-1b25248d5f17",
+          "arguments": {
+            "search_keywords": "MCH, máquina de chave, inoperante, causa, falha, RASF, motor, contato, fusível, travador",
+            "enable_summarization": false,
+            "search_query": "O que pode deixar uma máquina de chave MCH inoperante? Causas mais comuns de falha em MCH."
+          },
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "6234e175-faea-407e-a4fb-686d3b0e41a7",
+        "type": "event",
+        "timestamp": 1784804854,
+        "timestampMs": 1784804854365,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804841349",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "O que pode deixar uma máquina de chave MCH inoperante? Causas mais comuns de falha em MCH.",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "o"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "que"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "pode"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "deixar"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "uma"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "maquina"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "chave"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mch"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "inoperante"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causas"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mais"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "comuns"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "falha"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "em"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mch"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "maquina"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "chave"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "inoperante"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causa"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "falha"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "rasf"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "motor"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "contato"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "fusivel"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "travador"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "MCH máquina de chave inoperante causa falha RASF motor contato fusível travador"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "cfbc9d1e-62dc-4eeb-ac3b-35e37657c651",
+        "type": "event",
+        "timestamp": 1784804854,
+        "timestampMs": 1784804854376,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "902b9e3a-8559-4b62-8e4d-1b25248d5f17",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:03.0711358",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "9769683c-f1c4-46e7-b6ff-d38cbd7af9ea",
+        "type": "event",
+        "timestamp": 1784804861,
+        "timestampMs": 1784804861528,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf"
+        }
+      },
+      {
+        "id": "a35042af-60eb-41a1-b98c-833d4d48ebec",
+        "type": "event",
+        "timestamp": 1784804861,
+        "timestampMs": 1784804861528,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "summary": "",
+          "ask": "o que pode deixar uma mch inoperante?",
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "e10f4bc2-b812-447f-85ee-c1391454218e",
+        "type": "event",
+        "timestamp": 1784804861,
+        "timestampMs": 1784804861532,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "stepId": "90a63b9b-159f-4762-8afc-aa2cc249e79a",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "Let me try different keywords.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "e22e927b-2c4e-461e-8044-c1148fb161e4",
+        "type": "event",
+        "timestamp": 1784804861,
+        "timestampMs": 1784804861541,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "90a63b9b-159f-4762-8afc-aa2cc249e79a",
+          "arguments": {
+            "search_keywords": "máquina chave inoperante, motor queimado, fusível aberto, contato MCH, travador, agulha, tirante, indicação",
+            "enable_summarization": false,
+            "search_query": "causas máquina de chave inoperante motor fusível contato travador agulha"
+          },
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "687529df-763e-45f1-b49b-e775e899dcea",
+        "type": "event",
+        "timestamp": 1784804863,
+        "timestampMs": 1784804863176,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804841349",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "causas máquina de chave inoperante motor fusível contato travador agulha",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causas"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "maquina"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "chave"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "inoperante"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "motor"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "fusivel"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "contato"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "travador"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "agulha"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "maquina"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "chave"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "inoperante"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "motor"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "queimado"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "fusivel"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "aberto"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "contato"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mch"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "travador"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "agulha"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "tirante"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "indicacao"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "máquina chave inoperante motor queimado fusível aberto contato MCH travador agulha tirante indicação"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "afd05fa3-7f8a-4208-b7d4-00aba85da173",
+        "type": "event",
+        "timestamp": 1784804863,
+        "timestampMs": 1784804863182,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "90a63b9b-159f-4762-8afc-aa2cc249e79a",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:01.6519511",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "a5812fad-ee33-4ba8-a4e0-4de4b231f8c3",
+        "type": "event",
+        "timestamp": 1784804871,
+        "timestampMs": 1784804871925,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf"
+        }
+      },
+      {
+        "id": "db46628b-cba6-444e-8fd5-3d7339692f40",
+        "type": "event",
+        "timestamp": 1784804871,
+        "timestampMs": 1784804871925,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "summary": "",
+          "ask": "o que pode deixar uma mch inoperante?",
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "8a911d39-6309-42a3-a381-52e3fb275e26",
+        "type": "event",
+        "timestamp": 1784804871,
+        "timestampMs": 1784804871928,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "stepId": "ea54c491-0052-4074-8d51-2d5ee8882656",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The search tool is still not working. Let me try a different format.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "9d855f64-da36-4293-ac12-fe72015ce7a0",
+        "type": "event",
+        "timestamp": 1784804871,
+        "timestampMs": 1784804871937,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "ea54c491-0052-4074-8d51-2d5ee8882656",
+          "arguments": {
+            "search_keywords": "MCH HW GRS inoperante causa RASF",
+            "enable_summarization": false,
+            "search_query": "MCH máquina chave inoperante RASF causas"
+          },
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "f9e9a914-4e1f-4678-9136-ef46864c16d1",
+        "type": "event",
+        "timestamp": 1784804873,
+        "timestampMs": 1784804873725,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804841349",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "MCH máquina chave inoperante RASF causas",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mch"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "maquina"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "chave"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "inoperante"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "rasf"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causas"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mch"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "hw"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "grs"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "inoperante"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causa"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "rasf"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "MCH HW GRS inoperante causa RASF"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "bf1e995b-05e5-4197-ac48-ffefddf9d105",
+        "type": "event",
+        "timestamp": 1784804873,
+        "timestampMs": 1784804873734,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "ea54c491-0052-4074-8d51-2d5ee8882656",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:01.8080317",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "776ad07f-9110-4345-873d-f2797346b1c9",
+        "type": "event",
+        "timestamp": 1784804878,
+        "timestampMs": 1784804878862,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf"
+        }
+      },
+      {
+        "id": "a5090858-5e13-4b56-bf5b-59ffcd7a5482",
+        "type": "event",
+        "timestamp": 1784804878,
+        "timestampMs": 1784804878862,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "summary": "",
+          "ask": "o que pode deixar uma mch inoperante?",
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "1c9a42f5-96f6-4e07-a1de-b2088ab04c13",
+        "type": "event",
+        "timestamp": 1784804878,
+        "timestampMs": 1784804878872,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "stepId": "328fa62c-0094-4aff-b7c1-fbafd968dcce",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The search tool is still consistently returning null. Let me try a more simple search.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "0b12e44b-e35d-4361-baf1-8b4a51b56222",
+        "type": "event",
+        "timestamp": 1784804878,
+        "timestampMs": 1784804878876,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "328fa62c-0094-4aff-b7c1-fbafd968dcce",
+          "arguments": {
+            "search_keywords": "maquina chave",
+            "enable_summarization": false,
+            "search_query": "maquina de chave"
+          },
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "8709cef9-7847-48f7-931a-ef3d16cadc7c",
+        "type": "event",
+        "timestamp": 1784804880,
+        "timestampMs": 1784804880798,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804841349",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "maquina de chave",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "maquina"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "chave"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "maquina"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "chave"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "maquina chave"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "7d179c9b-3d18-4141-af16-73be4764cfd8",
+        "type": "event",
+        "timestamp": 1784804880,
+        "timestampMs": 1784804880806,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "328fa62c-0094-4aff-b7c1-fbafd968dcce",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "2d781c54-0b40-47d4-8571-54e06a0794bf",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:01.9348640",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "UnknownIntent",
+        "id": "bf0edbfdadad427087624d6f17c3139c",
+        "type": "trace",
+        "timestamp": 1784804911,
+        "timestampMs": 1784804911776,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804841349",
+        "value": {
+          "userQuery": "o que pode deixar uma mch inoperante?"
+        }
+      },
+      {
+        "valueType": "VariableAssignment",
+        "id": "df324660c303416db86b7971206f4e0c",
+        "type": "trace",
+        "timestamp": 1784804917,
+        "timestampMs": 1784804917163,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804841349",
+        "value": {
+          "name": "Answer",
+          "id": "Topic.Answer",
+          "newValue": "",
+          "type": "local"
+        }
+      },
+      {
+        "valueType": "KnowledgeTraceData",
+        "id": "5ef1cccab69b4e3d8be4fcf28f9cd984",
+        "type": "trace",
+        "timestamp": 1784804917,
+        "timestampMs": 1784804917163,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804841349",
+        "value": {
+          "completionState": "NoSearchResults",
+          "isKnowledgeSearched": true,
+          "citedKnowledgeSources": [],
+          "failedKnowledgeSourcesTypes": []
+        }
+      },
+      {
+        "valueType": "GPTAnswer",
+        "id": "2dc3fe41ad3c417fb51b9ab6dc5b6c04",
+        "type": "trace",
+        "timestamp": 1784804917,
+        "timestampMs": 1784804917163,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804841349",
+        "value": {
+          "gptAnswerState": "No Search Results"
+        }
+      },
+      {
+        "id": "b8dcbb14-6c7a-494c-90c2-3d4a15cee637",
+        "type": "message",
+        "timestamp": 1784804917,
+        "timestampMs": 1784804917160,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "channelId": "msteams",
+        "textFormat": "markdown",
+        "text": "Não sei como ajudar. Você pode tentar reformular a pergunta?",
+        "attachments": [],
+        "replyToId": "1784804841349",
+        "channelData": {
+          "feedbackLoop": {
+            "type": "default"
+          }
+        }
+      },
+      {
+        "id": "1784804976243",
+        "type": "message",
+        "timestamp": 1784804976,
+        "timestampMs": 1784804976261,
+        "from": {
+          "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+          "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+          "role": 1
+        },
+        "channelId": "msteams",
+        "textFormat": "plain",
+        "text": "estou indo atender uma falha de radio de dados, o que pode ser?",
+        "attachments": [
+          {
+            "contentType": "text/html",
+            "content": "<p>estou indo atender uma falha de radio de dados, o que pode ser?</p>"
+          }
+        ],
+        "channelData": {
+          "tenant": {
+            "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+          }
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "a51d3cc0-f038-4f06-815d-4a4bf7b46977",
+        "type": "event",
+        "timestamp": 1784804982,
+        "timestampMs": 1784804982808,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a"
+        }
+      },
+      {
+        "id": "fb0159b1-905b-494b-8187-63a42b5e9d16",
+        "type": "event",
+        "timestamp": 1784804982,
+        "timestampMs": 1784804982808,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "summary": "",
+          "ask": "estou indo atender uma falha de radio de dados, o que pode ser?",
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "eb3b1785-cbe4-4f65-ae88-4ff9a2c3f31d",
+        "type": "event",
+        "timestamp": 1784804982,
+        "timestampMs": 1784804982809,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "stepId": "1882fb73-b8cb-417e-892d-7b0318c04cdb",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The user is going to attend a data radio failure. Let me search for this information in the RASF and technical documentation.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "79628bef-76fc-4173-9831-2ac48baebb26",
+        "type": "event",
+        "timestamp": 1784804982,
+        "timestampMs": 1784804982812,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "1882fb73-b8cb-417e-892d-7b0318c04cdb",
+          "arguments": {
+            "search_keywords": "rádio de dados, falha, RASF, causa, GPS, harness, descarga atmosférica, CBTC, WSM, sincronismo",
+            "enable_summarization": false,
+            "search_query": "Quais as causas mais comuns de falha em rádio de dados CBTC registradas na RASF?"
+          },
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "246bbe28-bf37-4458-89af-c9e91f34c556",
+        "type": "event",
+        "timestamp": 1784804985,
+        "timestampMs": 1784804985252,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804976243",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "Quais as causas mais comuns de falha em rádio de dados CBTC registradas na RASF?",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "quais"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "as"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causas"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mais"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "comuns"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "falha"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "em"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "radio"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "dados"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "cbtc"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "registradas"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "na"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "rasf"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "radio"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "dados"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "falha"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "rasf"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causa"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "gps"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "harness"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "descarga"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "atmosferica"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "cbtc"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "wsm"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "sincronismo"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "rádio de dados falha RASF causa GPS harness descarga atmosférica CBTC WSM sincronismo"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "b4a99599-d62e-40b0-af53-6ff156096f17",
+        "type": "event",
+        "timestamp": 1784804985,
+        "timestampMs": 1784804985259,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "1882fb73-b8cb-417e-892d-7b0318c04cdb",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:02.4488563",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "62810f71-de66-46f9-8bf6-6996c898dc35",
+        "type": "event",
+        "timestamp": 1784804990,
+        "timestampMs": 1784804990633,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a"
+        }
+      },
+      {
+        "id": "550ee564-c820-4f87-9b53-5bd85cf0be7a",
+        "type": "event",
+        "timestamp": 1784804990,
+        "timestampMs": 1784804990633,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "summary": "",
+          "ask": "estou indo atender uma falha de radio de dados, o que pode ser?",
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "cdd7b31e-4e5d-46c6-ba11-b00801c4d804",
+        "type": "event",
+        "timestamp": 1784804990,
+        "timestampMs": 1784804990636,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "stepId": "5d0de86c-6e85-4a63-a3ef-cbd3c3cd1480",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The search is returning null again. Let me try again with different keywords.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "9c09406d-db3f-4450-b4a7-95e9c538d6de",
+        "type": "event",
+        "timestamp": 1784804990,
+        "timestampMs": 1784804990644,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "5d0de86c-6e85-4a63-a3ef-cbd3c3cd1480",
+          "arguments": {
+            "search_keywords": "RASF rádio dados causa frequente GPS harness descarga atmosférica MPLS switch",
+            "enable_summarization": false,
+            "search_query": "causas frequentes falha rádio de dados RASF histórico ocorrências"
+          },
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "28e0f76e-4448-4a95-88cc-16a6ca67a5f3",
+        "type": "event",
+        "timestamp": 1784804992,
+        "timestampMs": 1784804992695,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804976243",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "causas frequentes falha rádio de dados RASF histórico ocorrências",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causas"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "frequentes"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "falha"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "radio"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "dados"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "rasf"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "historico"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "ocorrencias"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "rasf"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "radio"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "dados"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "causa"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "frequente"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "gps"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "harness"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "descarga"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "atmosferica"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mpls"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "switch"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "RASF rádio dados causa frequente GPS harness descarga atmosférica MPLS switch"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "19e8e6a5-afcb-46a7-b751-d15ff17aa0c3",
+        "type": "event",
+        "timestamp": 1784804992,
+        "timestampMs": 1784804992703,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "5d0de86c-6e85-4a63-a3ef-cbd3c3cd1480",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:02.0674296",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "DynamicPlanReceived",
+        "id": "581d30d6-5bcf-4536-ac91-7308cbd6b9e2",
+        "type": "event",
+        "timestamp": 1784804997,
+        "timestampMs": 1784804997976,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceived",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "steps": [
+            "P:UniversalSearchTool"
+          ],
+          "isFinalPlan": false,
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a"
+        }
+      },
+      {
+        "id": "01aea143-b962-4711-a4b4-29ebafcadd89",
+        "type": "event",
+        "timestamp": 1784804997,
+        "timestampMs": 1784804997976,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanReceivedDebug",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "summary": "",
+          "ask": "estou indo atender uma falha de radio de dados, o que pode ser?",
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "isFinalPlan": false
+        }
+      },
+      {
+        "valueType": "DynamicPlanStepTriggered",
+        "id": "827c13aa-74a8-4623-a70b-5f3244ce48de",
+        "type": "event",
+        "timestamp": 1784804997,
+        "timestampMs": 1784804997979,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepTriggered",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "stepId": "78a46917-3857-4fb6-a943-a181f20d17e6",
+          "taskDialogId": "P:UniversalSearchTool",
+          "thought": "The search tool is still returning null. Let me try using the SUPORTE_TECNICO tool or searching for the first response tool.",
+          "state": 1,
+          "hasRecommendations": false,
+          "type": "KnowledgeSource"
+        }
+      },
+      {
+        "id": "23c7b32d-8e8e-4ccb-87d6-9a17084c4549",
+        "type": "event",
+        "timestamp": 1784804997,
+        "timestampMs": 1784804997989,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepBindUpdate",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "78a46917-3857-4fb6-a943-a181f20d17e6",
+          "arguments": {
+            "search_keywords": "MN-ENG-3017 rádio GE MDS TD220 troubleshooting, IT-ENG-3122 reset remoto",
+            "enable_summarization": false,
+            "search_query": "MN-ENG-3017 troubleshooting rádio de dados GE MDS TD220 atendimento campo"
+          },
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "autoFilledArguments": [
+            "search_keywords",
+            "search_query"
+          ]
+        }
+      },
+      {
+        "id": "a93717e4-81dc-40bc-9812-80190f489dc6",
+        "type": "event",
+        "timestamp": 1784804999,
+        "timestampMs": 1784804999974,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "UniversalSearchToolTraceData",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "toolId": "P:UniversalSearchTool",
+          "knowledgeSources": [
+            "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+            "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+            "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+            "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+            "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+            "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+          ],
+          "outputKnowledgeSources": [],
+          "fullResults": [],
+          "filteredResults": [],
+          "searchErrors": [],
+          "searchContextTraceInfo": {
+            "endpoints": [
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+              "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+            ],
+            "activityId": "1784804976243",
+            "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+            "performedContentProvenanceCheck": false,
+            "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+            "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+            "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+            "message": "MN-ENG-3017 troubleshooting rádio de dados GE MDS TD220 atendimento campo",
+            "searchTerms": [
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mn-eng-3017"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "troubleshooting"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "radio"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "de"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "dados"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "ge"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mds"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "td220"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "atendimento"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "campo"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mn-eng-3017"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "radio"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "ge"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "mds"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "td220"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "troubleshooting"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "it-eng-3122"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "reset"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "remoto"
+              },
+              {
+                "source": "sharepointSiteSearch",
+                "term": "MN-ENG-3017 rádio GE MDS TD220 troubleshooting IT-ENG-3122 reset remoto"
+              }
+            ],
+            "searchResults": [],
+            "verifiedSearchResults": [],
+            "searchErrors": [],
+            "searchLogs": [
+              {
+                "source": "sharepointSiteSearch",
+                "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "11b668ec-0f39-4a4f-a679-d598b4692440",
+        "type": "event",
+        "timestamp": 1784804999,
+        "timestampMs": 1784804999983,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "name": "DynamicPlanStepFinished",
+        "channelId": "msteams",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "value": {
+          "taskDialogId": "P:UniversalSearchTool",
+          "stepId": "78a46917-3857-4fb6-a943-a181f20d17e6",
+          "observation": {
+            "search_result": null
+          },
+          "planUsedOutputs": {},
+          "planIdentifier": "898feace-c4ba-4767-a910-8ce57085042a",
+          "state": "completed",
+          "hasRecommendations": false,
+          "executionTime": "00:00:02.0042967",
+          "displayedCost": 7
+        }
+      },
+      {
+        "valueType": "UnknownIntent",
+        "id": "fd4082a0834242a9867c606898b2098e",
+        "type": "trace",
+        "timestamp": 1784805033,
+        "timestampMs": 1784805033576,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804976243",
+        "value": {
+          "userQuery": "estou indo atender uma falha de radio de dados, o que pode ser?"
+        }
+      },
+      {
+        "valueType": "VariableAssignment",
+        "id": "5746b39899d1467482e708f37698829c",
+        "type": "trace",
+        "timestamp": 1784805039,
+        "timestampMs": 1784805039173,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804976243",
+        "value": {
+          "name": "Answer",
+          "id": "Topic.Answer",
+          "newValue": "",
+          "type": "local"
+        }
+      },
+      {
+        "valueType": "KnowledgeTraceData",
+        "id": "d454b9151c2948c7a560803bc5e536d4",
+        "type": "trace",
+        "timestamp": 1784805039,
+        "timestampMs": 1784805039173,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804976243",
+        "value": {
+          "completionState": "NoSearchResults",
+          "isKnowledgeSearched": true,
+          "citedKnowledgeSources": [],
+          "failedKnowledgeSourcesTypes": []
+        }
+      },
+      {
+        "valueType": "GPTAnswer",
+        "id": "698d751fa67747c79b24e5cdc522fe48",
+        "type": "trace",
+        "timestamp": 1784805039,
+        "timestampMs": 1784805039173,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804976243",
+        "value": {
+          "gptAnswerState": "No Search Results"
+        }
+      },
+      {
+        "valueType": "DialogRedirect",
+        "id": "f5a51a08c763462480047edacd51ae09",
+        "type": "trace",
+        "timestamp": 1784805039,
+        "timestampMs": 1784805039173,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804976243",
+        "value": {
+          "targetDialogId": "b606a80f-3537-48fc-8341-b54b640bf791",
+          "targetDialogType": 0
+        }
+      },
+      {
+        "id": "28edd9f7-1858-488b-b27f-5ab69fc9e2f8",
+        "type": "message",
+        "timestamp": 1784805039,
+        "timestampMs": 1784805039171,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "channelId": "msteams",
+        "textFormat": "markdown",
+        "text": "Em caso de dúvidas sobre a utilização do agente Volt entre em contato com agente_volt@mrs.com.br.",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "channelData": {
+          "feedbackLoop": {
+            "type": "default"
+          }
+        }
+      },
+      {
+        "valueType": "HandOff",
+        "id": "ab1c1febbb674d32a870c5873d6c26a2",
+        "type": "trace",
+        "timestamp": 1784805039,
+        "timestampMs": 1784805039173,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "replyToId": "1784804976243",
+        "value": {}
+      },
+      {
+        "id": "b080a2c6-0f2f-4ec5-a7eb-9e8c223cc026",
+        "type": "message",
+        "timestamp": 1784805163,
+        "timestampMs": 1784805163112,
+        "from": {
+          "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+          "role": 0
+        },
+        "channelId": "msteams",
+        "textFormat": "markdown",
+        "text": "Conversa encerrada devido inatividade.",
+        "attachments": [],
+        "replyToId": "1784804976243",
+        "channelData": {
+          "feedbackLoop": {
+            "type": "default"
+          }
+        }
+      },
+      {
+        "valueType": "SessionInfo",
+        "id": "0",
+        "type": "trace",
+        "timestamp": 1784805163,
+        "timestampMs": 1784805163112,
+        "from": {
+          "id": "",
+          "role": 0
+        },
+        "value": {
+          "startTimeUtc": "2026-07-23T11:03:34Z",
+          "endTimeUtc": "2026-07-23T11:12:43Z",
+          "type": "Engaged",
+          "outcome": "HandOff",
+          "turnCount": 9,
+          "impliedSuccess": false,
+          "outcomeReason": "AgentTransferConfiguredByAuthor"
+        }
+      }
+    ]
+  }

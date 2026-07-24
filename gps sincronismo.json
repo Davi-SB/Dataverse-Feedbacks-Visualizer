@@ -1,0 +1,2454 @@
+[
+    {
+      "valueType": "ConversationInfo",
+      "type": "trace",
+      "timestamp": 1784747106,
+      "timestampMs": 1784747106906,
+      "from": {
+        "id": "",
+        "role": 0
+      },
+      "value": {
+        "isDesignMode": false,
+        "locale": "pt-BR"
+      }
+    },
+    {
+      "id": "1784747106883",
+      "type": "message",
+      "timestamp": 1784747106,
+      "timestampMs": 1784747106906,
+      "from": {
+        "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+        "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "o que vc consegue fazer?",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>o que vc consegue fazer?</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "id": "83f4d617-dc3a-4d6d-96e1-f67269baf91a",
+      "type": "message",
+      "timestamp": 1784747108,
+      "timestampMs": 1784747108359,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "attachments": [
+        {
+          "contentType": "application/vnd.microsoft.card.oauth",
+          "content": {
+            "tokenExchangeResource": {
+              "id": "677787ee-9c85-4644-9a82-006e5d7f6cd1",
+              "uri": "96ff4394-9197-43aa-b393-6a41652e21f8"
+            },
+            "buttons": []
+          }
+        }
+      ],
+      "replyToId": "1784747106883",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "id": "f:ceb05038-59c2-3608-6a96-2f47f93f8ffe",
+      "type": "invoke",
+      "timestamp": 1784747110,
+      "timestampMs": 1784747110432,
+      "from": {
+        "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+        "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+        "role": 1
+      },
+      "name": "signin/tokenExchange",
+      "channelId": "msteams",
+      "attachments": [],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        },
+        "source": {
+          "name": "message"
+        }
+      }
+    },
+    {
+      "id": "c36a90c0-22f1-4c6b-b9f3-c36fb22b349b",
+      "type": "invokeResponse",
+      "timestamp": 1784747110,
+      "timestampMs": 1784747110972,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "f:ceb05038-59c2-3608-6a96-2f47f93f8ffe",
+      "value": {
+        "status": 200
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "7df9ed91-3e5d-4f93-8f0a-602c9cbcdccd",
+      "type": "event",
+      "timestamp": 1784747130,
+      "timestampMs": 1784747130466,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747106883",
+      "value": {
+        "steps": [
+          "cr61e_VOLT.topic.Greeting"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "ee6da7d8-9778-4b6f-a2bf-560d7162c55b"
+      }
+    },
+    {
+      "id": "16f2ae61-69ef-4b93-92f8-951e44e5f0f2",
+      "type": "event",
+      "timestamp": 1784747130,
+      "timestampMs": 1784747130466,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747106883",
+      "value": {
+        "summary": "",
+        "ask": "o que vc consegue fazer?",
+        "planIdentifier": "ee6da7d8-9778-4b6f-a2bf-560d7162c55b",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "aa7e7b80-6d20-435e-b353-d37bde2a1fd3",
+      "type": "event",
+      "timestamp": 1784747130,
+      "timestampMs": 1784747130468,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747106883",
+      "value": {
+        "planIdentifier": "ee6da7d8-9778-4b6f-a2bf-560d7162c55b",
+        "stepId": "f0d5e8d7-4786-4e1e-8971-8951947725cb",
+        "taskDialogId": "cr61e_VOLT.topic.Greeting",
+        "thought": "The user is asking what I can do. I should respond with a brief overview of my capabilities.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "CustomTopic"
+      }
+    },
+    {
+      "id": "3cd3b201-043c-403b-9d4f-1d5a24a69787",
+      "type": "event",
+      "timestamp": 1784747130,
+      "timestampMs": 1784747130476,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747106883",
+      "value": {
+        "taskDialogId": "cr61e_VOLT.topic.Greeting",
+        "stepId": "f0d5e8d7-4786-4e1e-8971-8951947725cb",
+        "arguments": {},
+        "planIdentifier": "ee6da7d8-9778-4b6f-a2bf-560d7162c55b",
+        "autoFilledArguments": []
+      }
+    },
+    {
+      "valueType": "DialogRedirect",
+      "id": "c04d4d2adcd34986b9c2484993d7261d",
+      "type": "trace",
+      "timestamp": 1784747130,
+      "timestampMs": 1784747130499,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784747106883",
+      "value": {
+        "targetDialogId": "0999316d-2f01-4ce6-8743-840f5364da75",
+        "targetDialogType": 1
+      }
+    },
+    {
+      "id": "d8aee5b2-6d8a-4fcd-a960-ba6d7bc3a10f",
+      "type": "message",
+      "timestamp": 1784747130,
+      "timestampMs": 1784747130497,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Olá, como posso ajudar hoje?",
+      "attachments": [],
+      "replyToId": "1784747106883",
+      "speak": "Olá, <break strength=\"medium\" />. Como posso ajudar?",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanFinished",
+      "id": "56da1ace-881c-4b1e-a7c3-99434c489f20",
+      "type": "event",
+      "timestamp": 1784747130,
+      "timestampMs": 1784747130498,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747106883",
+      "value": {
+        "planId": "ee6da7d8-9778-4b6f-a2bf-560d7162c55b"
+      }
+    },
+    {
+      "id": "1784747234953",
+      "type": "message",
+      "timestamp": 1784747234,
+      "timestampMs": 1784747234971,
+      "from": {
+        "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+        "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "como você consegue me ajudar?que tipo de informação vc tem?",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>como você consegue me ajudar?que tipo de informação vc tem?</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "valueType": "UnknownIntent",
+      "id": "fd47d67a1a584466b75b690292d4decf",
+      "type": "trace",
+      "timestamp": 1784747256,
+      "timestampMs": 1784747256890,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "value": {
+        "userQuery": "como você consegue me ajudar?que tipo de informação vc tem?"
+      }
+    },
+    {
+      "valueType": "VariableAssignment",
+      "id": "fb04a08b48d54eb1be27ab99ca03ec78",
+      "type": "trace",
+      "timestamp": 1784747264,
+      "timestampMs": 1784747264797,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "value": {
+        "name": "Answer",
+        "id": "Topic.Answer",
+        "newValue": "",
+        "type": "local"
+      }
+    },
+    {
+      "valueType": "KnowledgeTraceData",
+      "id": "a2a76c669e4e4023913d11a0a9786e4f",
+      "type": "trace",
+      "timestamp": 1784747264,
+      "timestampMs": 1784747264797,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "value": {
+        "completionState": "NoSearchResults",
+        "isKnowledgeSearched": true,
+        "citedKnowledgeSources": [],
+        "failedKnowledgeSourcesTypes": []
+      }
+    },
+    {
+      "valueType": "GPTAnswer",
+      "id": "b05d9491891048a49429995ff94b905e",
+      "type": "trace",
+      "timestamp": 1784747264,
+      "timestampMs": 1784747264797,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "value": {
+        "gptAnswerState": "No Search Results"
+      }
+    },
+    {
+      "id": "c54f6be3-3409-4d0d-935b-d4a230142508",
+      "type": "message",
+      "timestamp": 1784747264,
+      "timestampMs": 1784747264794,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Não sei como ajudar. Você pode tentar reformular a pergunta?",
+      "attachments": [],
+      "replyToId": "1784747234953",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "id": "1784747283576",
+      "type": "message",
+      "timestamp": 1784747283,
+      "timestampMs": 1784747283592,
+      "from": {
+        "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+        "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "qual o modo de falha mais comum em rádios de dados?",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>qual o modo de falha mais comum em rádios de dados?</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "dc9fad89-1543-441d-9716-b6ebde4257a1",
+      "type": "event",
+      "timestamp": 1784747299,
+      "timestampMs": 1784747299563,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "steps": [
+          "P:UniversalSearchTool"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c"
+      }
+    },
+    {
+      "id": "e7d67bf1-4f03-4cab-ae24-4b2724fff7b0",
+      "type": "event",
+      "timestamp": 1784747299,
+      "timestampMs": 1784747299563,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "summary": "",
+        "ask": "qual o modo de falha mais comum em rádios de dados?",
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "258acc41-8879-48eb-9c46-111e69432339",
+      "type": "event",
+      "timestamp": 1784747299,
+      "timestampMs": 1784747299567,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "stepId": "cbf87226-16b4-49a1-ba44-67d3372ae21f",
+        "taskDialogId": "P:UniversalSearchTool",
+        "thought": "The user is asking about the most common failure modes in data radios. Let me search the RASF for this information.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "KnowledgeSource"
+      }
+    },
+    {
+      "id": "6282266a-1751-437c-a3c7-15e30755413c",
+      "type": "event",
+      "timestamp": 1784747299,
+      "timestampMs": 1784747299575,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "cbf87226-16b4-49a1-ba44-67d3372ae21f",
+        "arguments": {
+          "search_query": "Quais são os modos de falha mais comuns em rádios de dados CBTC na RASF?",
+          "search_keywords": "rádio de dados, modo de falha, causa, GPS, isolado, sincronismo, WSM, RASF, recorrente",
+          "enable_summarization": false
+        },
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "autoFilledArguments": [
+          "search_query",
+          "search_keywords"
+        ]
+      }
+    },
+    {
+      "id": "f72de568-c06d-4842-89b5-a57ab334a6d0",
+      "type": "event",
+      "timestamp": 1784747302,
+      "timestampMs": 1784747302367,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "UniversalSearchToolTraceData",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "toolId": "P:UniversalSearchTool",
+        "knowledgeSources": [
+          "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+          "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+          "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+          "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+          "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+          "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+        ],
+        "outputKnowledgeSources": [],
+        "fullResults": [],
+        "filteredResults": [],
+        "searchErrors": [],
+        "searchContextTraceInfo": {
+          "endpoints": [
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+          ],
+          "activityId": "1784747283576",
+          "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+          "performedContentProvenanceCheck": false,
+          "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+          "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+          "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+          "message": "Quais são os modos de falha mais comuns em rádios de dados CBTC na RASF?",
+          "searchTerms": [
+            {
+              "source": "sharepointSiteSearch",
+              "term": "quais"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sao"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "os"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "modos"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "falha"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "mais"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "comuns"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "em"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radios"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cbtc"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "na"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "rasf"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "modo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "falha"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "causa"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "isolado"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "wsm"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "rasf"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "recorrente"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "rádio de dados modo de falha causa GPS isolado sincronismo WSM RASF recorrente"
+            }
+          ],
+          "searchResults": [],
+          "verifiedSearchResults": [],
+          "searchErrors": [],
+          "searchLogs": [
+            {
+              "source": "sharepointSiteSearch",
+              "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "445f77f7-409e-439c-a82e-d0508c1ba91a",
+      "type": "event",
+      "timestamp": 1784747302,
+      "timestampMs": 1784747302373,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "cbf87226-16b4-49a1-ba44-67d3372ae21f",
+        "observation": {
+          "search_result": null
+        },
+        "planUsedOutputs": {},
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "state": "completed",
+        "hasRecommendations": false,
+        "executionTime": "00:00:02.8084580",
+        "displayedCost": 7
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "a5c75344-73cd-4fa6-9b8e-29a32247a209",
+      "type": "event",
+      "timestamp": 1784747319,
+      "timestampMs": 1784747319624,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "steps": [
+          "P:UniversalSearchTool"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c"
+      }
+    },
+    {
+      "id": "cca78276-8a32-4d58-834a-eda20265a1e5",
+      "type": "event",
+      "timestamp": 1784747319,
+      "timestampMs": 1784747319624,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "summary": "",
+        "ask": "qual o modo de falha mais comum em rádios de dados?",
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "30a0eace-4989-45c3-946e-68642c774808",
+      "type": "event",
+      "timestamp": 1784747319,
+      "timestampMs": 1784747319627,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "stepId": "a7d6ed1e-008c-4100-8876-3ba7bdeb356f",
+        "taskDialogId": "P:UniversalSearchTool",
+        "thought": "The search returned null. Let me try another search.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "KnowledgeSource"
+      }
+    },
+    {
+      "id": "1f6b6fa0-2547-4444-8abd-d477089d0e17",
+      "type": "event",
+      "timestamp": 1784747319,
+      "timestampMs": 1784747319635,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "a7d6ed1e-008c-4100-8876-3ba7bdeb356f",
+        "arguments": {
+          "search_query": "Causas mais frequentes de falha em rádio de dados CBTC: GPS defeituoso, cabo harness, erro de sincronismo, isolamento",
+          "search_keywords": "rádio de dados CBTC, GPS defeituoso, erro sincronismo, isolado, cabo harness, causa mais frequente",
+          "enable_summarization": false
+        },
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "autoFilledArguments": [
+          "search_query",
+          "search_keywords"
+        ]
+      }
+    },
+    {
+      "id": "6aa73667-fd7c-4c88-9cd3-70d0affb97a2",
+      "type": "event",
+      "timestamp": 1784747321,
+      "timestampMs": 1784747321915,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "UniversalSearchToolTraceData",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "toolId": "P:UniversalSearchTool",
+        "knowledgeSources": [
+          "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+          "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+          "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+          "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+          "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+          "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+        ],
+        "outputKnowledgeSources": [],
+        "fullResults": [],
+        "filteredResults": [],
+        "searchErrors": [],
+        "searchContextTraceInfo": {
+          "endpoints": [
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+          ],
+          "activityId": "1784747283576",
+          "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+          "performedContentProvenanceCheck": false,
+          "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+          "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+          "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+          "message": "Causas mais frequentes de falha em rádio de dados CBTC: GPS defeituoso, cabo harness, erro de sincronismo, isolamento",
+          "searchTerms": [
+            {
+              "source": "sharepointSiteSearch",
+              "term": "causas"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "mais"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "frequentes"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "falha"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "em"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "defeituoso"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cabo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "harness"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "erro"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "isolamento"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "CBTC"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cbtc"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "defeituoso"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "erro"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "isolado"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cabo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "harness"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "causa"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "mais"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "frequente"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "rádio de dados CBTC GPS defeituoso erro sincronismo isolado cabo harness causa mais frequente"
+            }
+          ],
+          "searchResults": [],
+          "verifiedSearchResults": [],
+          "searchErrors": [],
+          "searchLogs": [
+            {
+              "source": "sharepointSiteSearch",
+              "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "741368c6-9094-4a1e-9ae1-218e82255f2f",
+      "type": "event",
+      "timestamp": 1784747321,
+      "timestampMs": 1784747321920,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "a7d6ed1e-008c-4100-8876-3ba7bdeb356f",
+        "observation": {
+          "search_result": null
+        },
+        "planUsedOutputs": {},
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "state": "completed",
+        "hasRecommendations": false,
+        "executionTime": "00:00:02.2944272",
+        "displayedCost": 7
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "c47ec62c-5bf6-4e77-ad44-0fefa9e15b6f",
+      "type": "event",
+      "timestamp": 1784747333,
+      "timestampMs": 1784747333237,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "steps": [
+          "P:UniversalSearchTool"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c"
+      }
+    },
+    {
+      "id": "5e3536da-6665-4fb1-ad0d-04cb3a01693a",
+      "type": "event",
+      "timestamp": 1784747333,
+      "timestampMs": 1784747333237,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "summary": "",
+        "ask": "qual o modo de falha mais comum em rádios de dados?",
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "e76f5809-fcb1-43be-bb83-025379e75933",
+      "type": "event",
+      "timestamp": 1784747333,
+      "timestampMs": 1784747333240,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "stepId": "421aca6b-a383-486e-94d7-8d70cf693e35",
+        "taskDialogId": "P:UniversalSearchTool",
+        "thought": "Both searches returned null. Let me try a broader search.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "KnowledgeSource"
+      }
+    },
+    {
+      "id": "a466169b-ea82-4321-867e-19d8b7e33309",
+      "type": "event",
+      "timestamp": 1784747333,
+      "timestampMs": 1784747333246,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "421aca6b-a383-486e-94d7-8d70cf693e35",
+        "arguments": {
+          "search_query": "modos de falha rádio de dados CBTC histórico RASF",
+          "search_keywords": "RADIO DE DADOS CBTC, RASF, falha, GPS, sincronismo, isolado, cabo",
+          "enable_summarization": false
+        },
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "autoFilledArguments": [
+          "search_query",
+          "search_keywords"
+        ]
+      }
+    },
+    {
+      "id": "227ad009-66de-48b0-bc3d-4d07a70c42c9",
+      "type": "event",
+      "timestamp": 1784747335,
+      "timestampMs": 1784747335710,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "UniversalSearchToolTraceData",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "toolId": "P:UniversalSearchTool",
+        "knowledgeSources": [
+          "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+          "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+          "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+          "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+          "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+          "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+        ],
+        "outputKnowledgeSources": [],
+        "fullResults": [],
+        "filteredResults": [],
+        "searchErrors": [],
+        "searchContextTraceInfo": {
+          "endpoints": [
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+          ],
+          "activityId": "1784747283576",
+          "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+          "performedContentProvenanceCheck": false,
+          "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+          "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+          "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+          "message": "modos de falha rádio de dados CBTC histórico RASF",
+          "searchTerms": [
+            {
+              "source": "sharepointSiteSearch",
+              "term": "modos"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "falha"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cbtc"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "historico"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "rasf"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cbtc"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "rasf"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "falha"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "isolado"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cabo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "RADIO DE DADOS CBTC RASF falha GPS sincronismo isolado cabo"
+            }
+          ],
+          "searchResults": [],
+          "verifiedSearchResults": [],
+          "searchErrors": [],
+          "searchLogs": [
+            {
+              "source": "sharepointSiteSearch",
+              "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "648288db-87d3-4661-951c-a30497332d03",
+      "type": "event",
+      "timestamp": 1784747335,
+      "timestampMs": 1784747335723,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "421aca6b-a383-486e-94d7-8d70cf693e35",
+        "observation": {
+          "search_result": null
+        },
+        "planUsedOutputs": {},
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "state": "completed",
+        "hasRecommendations": false,
+        "executionTime": "00:00:02.4832593",
+        "displayedCost": 7
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "5b7b9dfa-2e93-4be9-82a7-d94b55b0c200",
+      "type": "event",
+      "timestamp": 1784747346,
+      "timestampMs": 1784747346416,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "steps": [
+          "P:UniversalSearchTool"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c"
+      }
+    },
+    {
+      "id": "6ca21e8e-83f3-40c1-8cd4-bc289a82ae60",
+      "type": "event",
+      "timestamp": 1784747346,
+      "timestampMs": 1784747346416,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "summary": "",
+        "ask": "qual o modo de falha mais comum em rádios de dados?",
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "a90b12f0-3b1e-4ecc-b534-51be9b7f866b",
+      "type": "event",
+      "timestamp": 1784747346,
+      "timestampMs": 1784747346417,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "stepId": "62d560df-77e9-4aba-bc71-e882d252d315",
+        "taskDialogId": "P:UniversalSearchTool",
+        "thought": "All three searches returned null. The search tool seems to not be working. Let me try a very simple search.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "KnowledgeSource"
+      }
+    },
+    {
+      "id": "874d9eea-a9d8-4028-8a49-89ea7ed6fb84",
+      "type": "event",
+      "timestamp": 1784747346,
+      "timestampMs": 1784747346421,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "62d560df-77e9-4aba-bc71-e882d252d315",
+        "arguments": {
+          "search_query": "radio de dados falha GPS CBTC",
+          "search_keywords": "radio dados, GPS, falha, CBTC",
+          "enable_summarization": false
+        },
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "autoFilledArguments": [
+          "search_query",
+          "search_keywords"
+        ]
+      }
+    },
+    {
+      "id": "0f76574c-0fa2-4ca5-97b5-2bebd94039ce",
+      "type": "event",
+      "timestamp": 1784747348,
+      "timestampMs": 1784747348188,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "UniversalSearchToolTraceData",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "toolId": "P:UniversalSearchTool",
+        "knowledgeSources": [
+          "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+          "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+          "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+          "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+          "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+          "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+        ],
+        "outputKnowledgeSources": [],
+        "fullResults": [],
+        "filteredResults": [],
+        "searchErrors": [],
+        "searchContextTraceInfo": {
+          "endpoints": [
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+          ],
+          "activityId": "1784747283576",
+          "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+          "performedContentProvenanceCheck": false,
+          "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+          "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+          "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+          "message": "radio de dados falha GPS CBTC",
+          "searchTerms": [
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "falha"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cbtc"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "falha"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cbtc"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio dados GPS falha CBTC"
+            }
+          ],
+          "searchResults": [],
+          "verifiedSearchResults": [],
+          "searchErrors": [],
+          "searchLogs": [
+            {
+              "source": "sharepointSiteSearch",
+              "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "b9da9e74-138c-4a14-a291-02f2c985fff6",
+      "type": "event",
+      "timestamp": 1784747348,
+      "timestampMs": 1784747348198,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "62d560df-77e9-4aba-bc71-e882d252d315",
+        "observation": {
+          "search_result": null
+        },
+        "planUsedOutputs": {},
+        "planIdentifier": "cecb3901-1c7b-4cc7-8503-1c0966eda74c",
+        "state": "completed",
+        "hasRecommendations": false,
+        "executionTime": "00:00:01.7792866",
+        "displayedCost": 7
+      }
+    },
+    {
+      "valueType": "UnknownIntent",
+      "id": "2d804cf40c58468694f3c7fdf66c5aab",
+      "type": "trace",
+      "timestamp": 1784747375,
+      "timestampMs": 1784747375852,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784747283576",
+      "value": {
+        "userQuery": "qual o modo de falha mais comum em rádios de dados?"
+      }
+    },
+    {
+      "valueType": "VariableAssignment",
+      "id": "b30e02f198f649fd934ba487fd664de6",
+      "type": "trace",
+      "timestamp": 1784747382,
+      "timestampMs": 1784747382780,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784747283576",
+      "value": {
+        "name": "Answer",
+        "id": "Topic.Answer",
+        "newValue": "",
+        "type": "local"
+      }
+    },
+    {
+      "valueType": "KnowledgeTraceData",
+      "id": "c2a4d1e666e547edb88c9287eafd9063",
+      "type": "trace",
+      "timestamp": 1784747382,
+      "timestampMs": 1784747382780,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784747283576",
+      "value": {
+        "completionState": "NoSearchResults",
+        "isKnowledgeSearched": true,
+        "citedKnowledgeSources": [],
+        "failedKnowledgeSourcesTypes": []
+      }
+    },
+    {
+      "valueType": "GPTAnswer",
+      "id": "397e9a99bb644109babcf52cca0ebb1a",
+      "type": "trace",
+      "timestamp": 1784747382,
+      "timestampMs": 1784747382780,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784747283576",
+      "value": {
+        "gptAnswerState": "No Search Results"
+      }
+    },
+    {
+      "id": "9ccce2c3-4ba1-4630-96db-29818cc242df",
+      "type": "message",
+      "timestamp": 1784747382,
+      "timestampMs": 1784747382777,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Não sei como ajudar. Você pode tentar reformular a pergunta?",
+      "attachments": [],
+      "replyToId": "1784747283576",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "id": "1784747481937",
+      "type": "message",
+      "timestamp": 1784747481,
+      "timestampMs": 1784747481960,
+      "from": {
+        "id": "de3c60e2-07f3-7835-6023-1f3147d56b7c",
+        "aadObjectId": "319ae9f6-2b78-43ad-881b-f0b1465a9c14",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "como atender uma falha de gps sem sincronismo?",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>como atender uma falha de gps sem sincronismo?</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "bcc3039f-1125-4ead-ad9a-914a77265dc5",
+      "type": "event",
+      "timestamp": 1784747492,
+      "timestampMs": 1784747492666,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "steps": [
+          "P:UniversalSearchTool"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5"
+      }
+    },
+    {
+      "id": "76bc1c0c-422b-4982-8ef7-c0aac053baf4",
+      "type": "event",
+      "timestamp": 1784747492,
+      "timestampMs": 1784747492666,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "summary": "",
+        "ask": "como atender uma falha de gps sem sincronismo?",
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "02387b7e-f338-49f9-95a1-34989b42d782",
+      "type": "event",
+      "timestamp": 1784747492,
+      "timestampMs": 1784747492669,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "stepId": "bca111f6-ad25-4712-9118-9c50f3a40370",
+        "taskDialogId": "P:UniversalSearchTool",
+        "thought": "The user is asking how to handle a GPS synchronization failure in radio data systems. Let me search for this information.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "KnowledgeSource"
+      }
+    },
+    {
+      "id": "a2c2296f-39ce-4d8a-88ca-a999483b5b6c",
+      "type": "event",
+      "timestamp": 1784747492,
+      "timestampMs": 1784747492677,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "bca111f6-ad25-4712-9118-9c50f3a40370",
+        "arguments": {
+          "search_query": "Como atender falha de GPS sem sincronismo no rádio de dados CBTC? Procedimento de reset e troubleshooting.",
+          "search_keywords": "GPS sincronismo, erro sincronismo, reset GPS, rádio dados, escorregamento tempo, atendimento, troubleshooting, IT-ENG-3122",
+          "enable_summarization": false
+        },
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "autoFilledArguments": [
+          "search_query",
+          "search_keywords"
+        ]
+      }
+    },
+    {
+      "id": "6435cafa-423f-4d72-aadd-2f346ad8a3aa",
+      "type": "event",
+      "timestamp": 1784747494,
+      "timestampMs": 1784747494477,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "UniversalSearchToolTraceData",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "toolId": "P:UniversalSearchTool",
+        "knowledgeSources": [
+          "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+          "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+          "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+          "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+          "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+          "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+        ],
+        "outputKnowledgeSources": [],
+        "fullResults": [],
+        "filteredResults": [],
+        "searchErrors": [],
+        "searchContextTraceInfo": {
+          "endpoints": [
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+          ],
+          "activityId": "1784747481937",
+          "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+          "performedContentProvenanceCheck": false,
+          "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+          "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+          "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+          "message": "Como atender falha de GPS sem sincronismo no rádio de dados CBTC? Procedimento de reset e troubleshooting.",
+          "searchTerms": [
+            {
+              "source": "sharepointSiteSearch",
+              "term": "como"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "atender"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "falha"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sem"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "no"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cbtc"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "procedimento"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "reset"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "e"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "troubleshooting"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "erro"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "reset"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "escorregamento"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "tempo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "atendimento"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "troubleshooting"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "it-eng-3122"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "GPS sincronismo erro sincronismo reset GPS rádio dados escorregamento tempo atendimento troubleshooting IT-ENG-3122"
+            }
+          ],
+          "searchResults": [],
+          "verifiedSearchResults": [],
+          "searchErrors": [],
+          "searchLogs": [
+            {
+              "source": "sharepointSiteSearch",
+              "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "80c70daf-6d00-4bbd-aaff-91e602384fdc",
+      "type": "event",
+      "timestamp": 1784747494,
+      "timestampMs": 1784747494483,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "bca111f6-ad25-4712-9118-9c50f3a40370",
+        "observation": {
+          "search_result": null
+        },
+        "planUsedOutputs": {},
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "state": "completed",
+        "hasRecommendations": false,
+        "executionTime": "00:00:01.8146430",
+        "displayedCost": 7
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "42e58064-d9a8-47bb-bdcd-f14aaea0289f",
+      "type": "event",
+      "timestamp": 1784747506,
+      "timestampMs": 1784747506377,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "steps": [
+          "P:UniversalSearchTool"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5"
+      }
+    },
+    {
+      "id": "8eb71450-c08b-4fe9-9cef-5d7aec59d4a7",
+      "type": "event",
+      "timestamp": 1784747506,
+      "timestampMs": 1784747506377,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "summary": "",
+        "ask": "como atender uma falha de gps sem sincronismo?",
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "4a7fa565-f55e-4709-ba84-da2dcf735a33",
+      "type": "event",
+      "timestamp": 1784747506,
+      "timestampMs": 1784747506380,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "stepId": "80826f76-326d-4008-8cb9-178538321710",
+        "taskDialogId": "P:UniversalSearchTool",
+        "thought": "The search returned null again. Let me try a different approach.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "KnowledgeSource"
+      }
+    },
+    {
+      "id": "6efeb618-7e37-4d7b-bad5-538cf41f11da",
+      "type": "event",
+      "timestamp": 1784747506,
+      "timestampMs": 1784747506388,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "80826f76-326d-4008-8cb9-178538321710",
+        "arguments": {
+          "search_query": "procedimento reset rádio de dados GPS sincronismo CBTC soft reset hard reset",
+          "search_keywords": "reset remoto rádio dados, GPS PPS, sincronismo, soft reset, hard reset, Syncbox, TM4, Garmin",
+          "enable_summarization": false
+        },
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "autoFilledArguments": [
+          "search_query",
+          "search_keywords"
+        ]
+      }
+    },
+    {
+      "id": "8983d495-6f1e-4709-9d10-83e5f96d9d06",
+      "type": "event",
+      "timestamp": 1784747507,
+      "timestampMs": 1784747507990,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "UniversalSearchToolTraceData",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "toolId": "P:UniversalSearchTool",
+        "knowledgeSources": [
+          "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+          "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+          "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+          "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+          "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+          "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+        ],
+        "outputKnowledgeSources": [],
+        "fullResults": [],
+        "filteredResults": [],
+        "searchErrors": [],
+        "searchContextTraceInfo": {
+          "endpoints": [
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+          ],
+          "activityId": "1784747481937",
+          "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+          "performedContentProvenanceCheck": false,
+          "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+          "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+          "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+          "message": "procedimento reset rádio de dados GPS sincronismo CBTC soft reset hard reset",
+          "searchTerms": [
+            {
+              "source": "sharepointSiteSearch",
+              "term": "procedimento"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "reset"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "cbtc"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "soft"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "hard"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "reset"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "remoto"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "pps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "soft"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "hard"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "syncbox"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "tm4"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "garmin"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "reset remoto rádio dados GPS PPS sincronismo soft reset hard reset Syncbox TM4 Garmin"
+            }
+          ],
+          "searchResults": [],
+          "verifiedSearchResults": [],
+          "searchErrors": [],
+          "searchLogs": [
+            {
+              "source": "sharepointSiteSearch",
+              "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "80fcc4fb-eb4a-4ad7-a374-5e29a8692458",
+      "type": "event",
+      "timestamp": 1784747507,
+      "timestampMs": 1784747507996,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "80826f76-326d-4008-8cb9-178538321710",
+        "observation": {
+          "search_result": null
+        },
+        "planUsedOutputs": {},
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "state": "completed",
+        "hasRecommendations": false,
+        "executionTime": "00:00:01.6173029",
+        "displayedCost": 7
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "dd4bbf76-b0e6-41c9-b166-1d1b6b6fc1c9",
+      "type": "event",
+      "timestamp": 1784747515,
+      "timestampMs": 1784747515786,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "steps": [
+          "P:UniversalSearchTool"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5"
+      }
+    },
+    {
+      "id": "784b70a7-e13d-4d40-a0bc-54120dd95e3a",
+      "type": "event",
+      "timestamp": 1784747515,
+      "timestampMs": 1784747515786,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "summary": "",
+        "ask": "como atender uma falha de gps sem sincronismo?",
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "1a6495e0-82b4-4fdb-98d2-3e18db43226e",
+      "type": "event",
+      "timestamp": 1784747515,
+      "timestampMs": 1784747515824,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "stepId": "a95ea6b8-b14a-4f92-b3d8-3def652ccd11",
+        "taskDialogId": "P:UniversalSearchTool",
+        "thought": "The search tool still returns null. Let me try one more broad search.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "KnowledgeSource"
+      }
+    },
+    {
+      "id": "a806d498-8475-4f50-89bc-6c474e89284f",
+      "type": "event",
+      "timestamp": 1784747515,
+      "timestampMs": 1784747515834,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "a95ea6b8-b14a-4f92-b3d8-3def652ccd11",
+        "arguments": {
+          "search_query": "IT-ENG-3122 reset GPS rádio de dados sincronismo procedimento atendimento",
+          "search_keywords": "IT-ENG-3122, reset rádio GPS, MN-ENG-3017, troubleshooting rádio dados",
+          "enable_summarization": false
+        },
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "autoFilledArguments": [
+          "search_query",
+          "search_keywords"
+        ]
+      }
+    },
+    {
+      "id": "f67d2b5c-7c1b-40aa-8a40-097246e0b12c",
+      "type": "event",
+      "timestamp": 1784747517,
+      "timestampMs": 1784747517293,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "UniversalSearchToolTraceData",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "toolId": "P:UniversalSearchTool",
+        "knowledgeSources": [
+          "cr61e_VOLT.topic.0106TABELADEDOCUMENTOS_uvghXhna9U62a0NYLYKsl",
+          "cr61e_VOLT.topic.011RASF_6ALmcKqa4zWZ7Mm5fqKQw",
+          "cr61e_VOLT.topic.012TAXONOMIAECABECALHOS_7eoW1kc47RUyjnZxOdJ2L",
+          "cr61e_VOLT.topic.013APOSTILASEMANUAIS_8ofRdN11a8Q4v9kKnpBiS",
+          "cr61e_VOLT.topic.014PROCEDIMENTOS_WJWgCxIDumhihVOypfQAj",
+          "cr61e_VOLT.topic.015INFORMESTECNICOS_6F5X07yfKyhlOnrrxRB1N"
+        ],
+        "outputKnowledgeSources": [],
+        "fullResults": [],
+        "filteredResults": [],
+        "searchErrors": [],
+        "searchContextTraceInfo": {
+          "endpoints": [
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.06 - TABELA DE DOCUMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.1 - RASF",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.2 - TAXONOMIA E CABECALHOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.3 - APOSTILAS E MANUAIS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.4 - PROCEDIMENTOS",
+            "https://mrslogsa.sharepoint.com/sites/copilots-hub/Copilotos Operao/VOLT/01. Knowledge Base (RAG)/01.5 - INFORMES TECNICOS"
+          ],
+          "activityId": "1784747481937",
+          "conversationId": "a:1sQZWVWoX4VaTR26Mx07191bP2Kk6_33OGsj0iT69Oy50k52M8xD4jFG9N6bizv8jMTTBE3y8uzY_n3C7OYa1Z1QRwyEeRwumhwhud4wI_vZYN4iJhXi9Mhxght1_Dc72",
+          "performedContentProvenanceCheck": false,
+          "cdsBotId": "ec4f2bf8-bc00-4b23-9e19-23da9f31e961",
+          "tenantId": "0e36c668-f89c-4391-b4e0-d7a789672100",
+          "environmentId": "a0b6617d-5ff7-ee78-8639-ae26632e7bea",
+          "message": "IT-ENG-3122 reset GPS rádio de dados sincronismo procedimento atendimento",
+          "searchTerms": [
+            {
+              "source": "sharepointSiteSearch",
+              "term": "it-eng-3122"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "reset"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "de"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "sincronismo"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "procedimento"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "atendimento"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "it-eng-3122"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "reset"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "radio"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "gps"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "mn-eng-3017"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "troubleshooting"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "dados"
+            },
+            {
+              "source": "sharepointSiteSearch",
+              "term": "IT-ENG-3122 reset rádio GPS MN-ENG-3017 troubleshooting rádio dados"
+            }
+          ],
+          "searchResults": [],
+          "verifiedSearchResults": [],
+          "searchErrors": [],
+          "searchLogs": [
+            {
+              "source": "sharepointSiteSearch",
+              "logMessage": "GraphSearch.EnableSharepointGoldSearch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "d6f1db9c-e4d8-4ac3-b815-6be621a27481",
+      "type": "event",
+      "timestamp": 1784747517,
+      "timestampMs": 1784747517299,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "taskDialogId": "P:UniversalSearchTool",
+        "stepId": "a95ea6b8-b14a-4f92-b3d8-3def652ccd11",
+        "observation": {
+          "search_result": null
+        },
+        "planUsedOutputs": {},
+        "planIdentifier": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5",
+        "state": "completed",
+        "hasRecommendations": false,
+        "executionTime": "00:00:01.5117900",
+        "displayedCost": 7
+      }
+    },
+    {
+      "valueType": "KnowledgeTraceData",
+      "id": "1b2c0ed508a34729b42189bb6ab85f45",
+      "type": "trace",
+      "timestamp": 1784747557,
+      "timestampMs": 1784747557000,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784747481937",
+      "value": {
+        "completionState": "Answered",
+        "isKnowledgeSearched": true,
+        "citedKnowledgeSources": [],
+        "failedKnowledgeSourcesTypes": []
+      }
+    },
+    {
+      "id": "78b42ecf-a53c-44f4-b7da-879018e00d25",
+      "type": "message",
+      "timestamp": 1784747556,
+      "timestampMs": 1784747556996,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "[REDACTED]",
+      "replyToId": "1784747481937"
+    },
+    {
+      "valueType": "DynamicPlanFinished",
+      "id": "3aa65d68-731c-4b8c-8238-b8fdf092d6ad",
+      "type": "event",
+      "timestamp": 1784747556,
+      "timestampMs": 1784747556999,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "value": {
+        "planId": "688d8fbd-1f5d-4b7d-a168-5a4fceb76dd5"
+      }
+    },
+    {
+      "id": "e28f0377-7fd9-4b3f-a6ee-c031f4221899",
+      "type": "message",
+      "timestamp": 1784747680,
+      "timestampMs": 1784747680587,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Conversa encerrada devido inatividade.",
+      "attachments": [],
+      "replyToId": "1784747481937",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "valueType": "SessionInfo",
+      "id": "0",
+      "type": "trace",
+      "timestamp": 1784747680,
+      "timestampMs": 1784747680587,
+      "from": {
+        "id": "",
+        "role": 0
+      },
+      "value": {
+        "startTimeUtc": "2026-07-22T19:05:06Z",
+        "endTimeUtc": "2026-07-22T19:14:40Z",
+        "type": "Engaged",
+        "outcome": "Abandoned",
+        "turnCount": 10,
+        "lastUserIntentId": "0999316d-2f01-4ce6-8743-840f5364da75",
+        "impliedSuccess": false,
+        "outcomeReason": "UserExit"
+      }
+    }
+  ]

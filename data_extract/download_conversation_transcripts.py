@@ -41,6 +41,11 @@ ENVIRONMENTS = {
         "url": "https://mrs-ia-prod.crm2.dynamics.com",
         "output": SCRIPT_DIR.parent / "conversationtranscripts_prod.csv",
     },
+    "3": {
+        "name": "MRS-IA-SANDBOX",
+        "url": "https://mrs-ia-sandbox.crm2.dynamics.com",
+        "output": SCRIPT_DIR.parent / "conversationtranscripts_sandbox.csv",
+    },
 }
 
 # Tenant ID do Azure AD (domínio ou GUID)

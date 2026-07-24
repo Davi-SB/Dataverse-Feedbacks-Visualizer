@@ -1,0 +1,968 @@
+[
+    {
+      "valueType": "ConversationInfo",
+      "type": "trace",
+      "timestamp": 1784726185,
+      "timestampMs": 1784726185324,
+      "from": {
+        "id": "",
+        "role": 0
+      },
+      "value": {
+        "isDesignMode": false,
+        "locale": "pt-BR"
+      }
+    },
+    {
+      "id": "f:f28ec334-f135-62d0-86b9-133839074537",
+      "type": "installationUpdate",
+      "timestamp": 1784726185,
+      "timestampMs": 1784726185324,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "attachments": [],
+      "channelData": {
+        "settings": {
+          "selectedChannel": {
+            "id": "19:07b2468e-a334-4ace-a29b-2ba8281fde36_b03f8dd8-04f9-4eb5-bad4-d87508222cbc@unq.gbl.spaces"
+          }
+        },
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        },
+        "source": {
+          "name": "message"
+        }
+      }
+    },
+    {
+      "id": "f:1fd51674-7610-f2dd-f913-66d4c578f9e6",
+      "type": "conversationUpdate",
+      "timestamp": 1784726218,
+      "timestampMs": 1784726218570,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "attachments": [],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "id": "b54938f7-00ac-489b-ab17-86c028ffbf21",
+      "type": "message",
+      "timestamp": 1784726219,
+      "timestampMs": 1784726219276,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "attachments": [
+        {
+          "contentType": "application/vnd.microsoft.card.oauth",
+          "content": {
+            "tokenExchangeResource": {
+              "id": "2f04171d-b73a-4ce6-9949-76e15e69da6c",
+              "uri": "96ff4394-9197-43aa-b393-6a41652e21f8"
+            },
+            "buttons": []
+          }
+        }
+      ],
+      "replyToId": "f:1fd51674-7610-f2dd-f913-66d4c578f9e6",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "id": "f:2fcd42c3-7f24-8374-73d2-6c39aed5182e",
+      "type": "installationUpdate",
+      "timestamp": 1784726218,
+      "timestampMs": 1784726218839,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "attachments": [],
+      "channelData": {
+        "settings": {
+          "selectedChannel": {
+            "id": "19:07b2468e-a334-4ace-a29b-2ba8281fde36_b03f8dd8-04f9-4eb5-bad4-d87508222cbc@unq.gbl.spaces"
+          }
+        },
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        },
+        "source": {
+          "name": "message"
+        }
+      }
+    },
+    {
+      "id": "f:10528cec-1e25-56b7-61ce-28bbc970ecab",
+      "type": "invoke",
+      "timestamp": 1784726222,
+      "timestampMs": 1784726222517,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "name": "signin/tokenExchange",
+      "channelId": "msteams",
+      "attachments": [],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        },
+        "source": {
+          "name": "message"
+        }
+      }
+    },
+    {
+      "id": "640abd7c-e816-44b6-b170-c70e0f6e2149",
+      "type": "invokeResponse",
+      "timestamp": 1784726223,
+      "timestampMs": 1784726223245,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "f:10528cec-1e25-56b7-61ce-28bbc970ecab",
+      "value": {
+        "status": 200
+      }
+    },
+    {
+      "id": "1784726230087",
+      "type": "message",
+      "timestamp": 1784726230,
+      "timestampMs": 1784726230106,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "oi",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>oi</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "6242a8e1-e81b-4367-a45f-ce9300b7de64",
+      "type": "event",
+      "timestamp": 1784726234,
+      "timestampMs": 1784726234328,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726230087",
+      "value": {
+        "steps": [
+          "cr61e_VOLT.topic.Greeting"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "9884db1f-8d61-4e33-b8d6-98321c0ee266"
+      }
+    },
+    {
+      "id": "a3c6b376-e7ae-4a96-8d0a-313e95d5b979",
+      "type": "event",
+      "timestamp": 1784726234,
+      "timestampMs": 1784726234328,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726230087",
+      "value": {
+        "summary": "",
+        "ask": "oi",
+        "planIdentifier": "9884db1f-8d61-4e33-b8d6-98321c0ee266",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "8ba6aacc-1427-4106-9651-de7f28af0405",
+      "type": "event",
+      "timestamp": 1784726234,
+      "timestampMs": 1784726234331,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726230087",
+      "value": {
+        "planIdentifier": "9884db1f-8d61-4e33-b8d6-98321c0ee266",
+        "stepId": "a8289ccc-4b7a-4cdf-8aa7-01683f298b05",
+        "taskDialogId": "cr61e_VOLT.topic.Greeting",
+        "thought": "The user is greeting with \"oi\" - this is a simple greeting without a technical question. I should use the Sauda--o tool.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "CustomTopic"
+      }
+    },
+    {
+      "id": "aaf027ff-3ec8-464a-b70f-98b83c759bc1",
+      "type": "event",
+      "timestamp": 1784726234,
+      "timestampMs": 1784726234340,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726230087",
+      "value": {
+        "taskDialogId": "cr61e_VOLT.topic.Greeting",
+        "stepId": "a8289ccc-4b7a-4cdf-8aa7-01683f298b05",
+        "arguments": {},
+        "planIdentifier": "9884db1f-8d61-4e33-b8d6-98321c0ee266",
+        "autoFilledArguments": []
+      }
+    },
+    {
+      "valueType": "DialogRedirect",
+      "id": "afab3bb4010d4ed6a83b52c3eb0641f8",
+      "type": "trace",
+      "timestamp": 1784726234,
+      "timestampMs": 1784726234361,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784726230087",
+      "value": {
+        "targetDialogId": "0999316d-2f01-4ce6-8743-840f5364da75",
+        "targetDialogType": 1
+      }
+    },
+    {
+      "id": "c18edb91-a954-45b0-a0c1-eb6978b9f6c8",
+      "type": "message",
+      "timestamp": 1784726234,
+      "timestampMs": 1784726234359,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Olá, como posso ajudar hoje?",
+      "attachments": [],
+      "replyToId": "1784726230087",
+      "speak": "Olá, <break strength=\"medium\" />. Como posso ajudar?",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanFinished",
+      "id": "bc370bf1-c6d4-4056-bb2c-1dc158b0a9cc",
+      "type": "event",
+      "timestamp": 1784726234,
+      "timestampMs": 1784726234360,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726230087",
+      "value": {
+        "planId": "9884db1f-8d61-4e33-b8d6-98321c0ee266"
+      }
+    },
+    {
+      "id": "1784726256909",
+      "type": "message",
+      "timestamp": 1784726256,
+      "timestampMs": 1784726256927,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "como quais temos você pode me ajjdar?",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>como quais temos você pode me ajjdar?</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "valueType": "UnknownIntent",
+      "id": "61d60044fa664d4f9c6c595f06aa0b4a",
+      "type": "trace",
+      "timestamp": 1784726266,
+      "timestampMs": 1784726266929,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "value": {
+        "userQuery": "como quais temos você pode me ajjdar?"
+      }
+    },
+    {
+      "valueType": "VariableAssignment",
+      "id": "2dd8c7cdfa2249d79458fd0117df0eb1",
+      "type": "trace",
+      "timestamp": 1784726273,
+      "timestampMs": 1784726273013,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "value": {
+        "name": "Answer",
+        "id": "Topic.Answer",
+        "newValue": "",
+        "type": "local"
+      }
+    },
+    {
+      "valueType": "KnowledgeTraceData",
+      "id": "c3c43f8c5af9453e8bd56f8f58abe32a",
+      "type": "trace",
+      "timestamp": 1784726273,
+      "timestampMs": 1784726273013,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "value": {
+        "completionState": "NoSearchResults",
+        "isKnowledgeSearched": true,
+        "citedKnowledgeSources": [],
+        "failedKnowledgeSourcesTypes": []
+      }
+    },
+    {
+      "valueType": "GPTAnswer",
+      "id": "71d1a0fffd354e4387775a8b32df8b40",
+      "type": "trace",
+      "timestamp": 1784726273,
+      "timestampMs": 1784726273013,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "value": {
+        "gptAnswerState": "No Search Results"
+      }
+    },
+    {
+      "id": "7d230110-71da-403e-be18-5e92977bc836",
+      "type": "message",
+      "timestamp": 1784726273,
+      "timestampMs": 1784726273011,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Não sei como ajudar. Você pode tentar reformular a pergunta?",
+      "attachments": [],
+      "replyToId": "1784726256909",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "id": "1784726305781",
+      "type": "message",
+      "timestamp": 1784726305,
+      "timestampMs": 1784726305804,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "o que você pode fazer?",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>o que você pode fazer?</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "982b5d18-68e1-47fa-85c0-a2bb4c4a2990",
+      "type": "event",
+      "timestamp": 1784726309,
+      "timestampMs": 1784726309452,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726305781",
+      "value": {
+        "steps": [
+          "cr61e_VOLT.topic.Greeting"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "31eb7d6c-a53a-4604-82e6-796619a214e6"
+      }
+    },
+    {
+      "id": "832e4ebb-fb7d-493b-a24b-c3fc6d7ace74",
+      "type": "event",
+      "timestamp": 1784726309,
+      "timestampMs": 1784726309452,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726305781",
+      "value": {
+        "summary": "",
+        "ask": "o que você pode fazer?",
+        "planIdentifier": "31eb7d6c-a53a-4604-82e6-796619a214e6",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "84cbfb6f-f85f-4bc6-beb3-94ecdc2e5ab9",
+      "type": "event",
+      "timestamp": 1784726309,
+      "timestampMs": 1784726309455,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726305781",
+      "value": {
+        "planIdentifier": "31eb7d6c-a53a-4604-82e6-796619a214e6",
+        "stepId": "e3051443-b684-496c-b7f9-5231cd8c0b78",
+        "taskDialogId": "cr61e_VOLT.topic.Greeting",
+        "thought": "The user is asking what I can do. This is similar to the previous question. I should explain my capabilities as the VOLT agent.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "CustomTopic"
+      }
+    },
+    {
+      "id": "f5b721f3-6e4f-46dc-9baf-2f7ab0f0b7a0",
+      "type": "event",
+      "timestamp": 1784726309,
+      "timestampMs": 1784726309458,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726305781",
+      "value": {
+        "taskDialogId": "cr61e_VOLT.topic.Greeting",
+        "stepId": "e3051443-b684-496c-b7f9-5231cd8c0b78",
+        "arguments": {},
+        "planIdentifier": "31eb7d6c-a53a-4604-82e6-796619a214e6",
+        "autoFilledArguments": []
+      }
+    },
+    {
+      "valueType": "DialogRedirect",
+      "id": "827b5a7ee12c403497ee5171769d6014",
+      "type": "trace",
+      "timestamp": 1784726309,
+      "timestampMs": 1784726309502,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784726305781",
+      "value": {
+        "targetDialogId": "0999316d-2f01-4ce6-8743-840f5364da75",
+        "targetDialogType": 1
+      }
+    },
+    {
+      "id": "844d9865-a0d9-4a4a-bfb5-3f988b6f9692",
+      "type": "message",
+      "timestamp": 1784726309,
+      "timestampMs": 1784726309499,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Olá, como posso ajudar hoje?",
+      "attachments": [],
+      "replyToId": "1784726305781",
+      "speak": "Olá, <break strength=\"medium\" />. Como posso ajudar?",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanFinished",
+      "id": "4f2c8aa4-8ab2-4d64-8470-b0008fd0d708",
+      "type": "event",
+      "timestamp": 1784726309,
+      "timestampMs": 1784726309500,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726305781",
+      "value": {
+        "planId": "31eb7d6c-a53a-4604-82e6-796619a214e6"
+      }
+    },
+    {
+      "id": "1784726324490",
+      "type": "message",
+      "timestamp": 1784726324,
+      "timestampMs": 1784726324507,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "o que é uma falha?",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>o que é uma falha?</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "bac25927-e8f1-441c-ad24-911c051a14bb",
+      "type": "event",
+      "timestamp": 1784726329,
+      "timestampMs": 1784726329689,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726324490",
+      "value": {
+        "steps": [
+          "cr61e_VOLT.topic.FORA_ESCOPO"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "9950fd65-7c75-4cbb-9c10-27ada964160c"
+      }
+    },
+    {
+      "id": "354c0981-58d3-49c5-a384-fefa72ff6dd8",
+      "type": "event",
+      "timestamp": 1784726329,
+      "timestampMs": 1784726329689,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726324490",
+      "value": {
+        "summary": "",
+        "ask": "o que é uma falha?",
+        "planIdentifier": "9950fd65-7c75-4cbb-9c10-27ada964160c",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "664948f6-0c9a-4f4a-a2b7-6e55d62a2f1b",
+      "type": "event",
+      "timestamp": 1784726329,
+      "timestampMs": 1784726329693,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726324490",
+      "value": {
+        "planIdentifier": "9950fd65-7c75-4cbb-9c10-27ada964160c",
+        "stepId": "66a8720c-8a9e-4faa-86da-d22eb9f6c435",
+        "taskDialogId": "cr61e_VOLT.topic.FORA_ESCOPO",
+        "thought": "The user is asking \"what is a fault/failure?\" This is a generic/conceptual question. It could be within scope since it's related to maintenance. Let me answer this within the context of railway electro-electronic maintenance.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "CustomTopic"
+      }
+    },
+    {
+      "id": "3a3a0c57-da09-47ab-b78d-902252e2dc23",
+      "type": "event",
+      "timestamp": 1784726329,
+      "timestampMs": 1784726329704,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726324490",
+      "value": {
+        "taskDialogId": "cr61e_VOLT.topic.FORA_ESCOPO",
+        "stepId": "66a8720c-8a9e-4faa-86da-d22eb9f6c435",
+        "arguments": {},
+        "planIdentifier": "9950fd65-7c75-4cbb-9c10-27ada964160c",
+        "autoFilledArguments": []
+      }
+    },
+    {
+      "valueType": "DialogRedirect",
+      "id": "1d87ed38ac294248b3253196d4d4ea17",
+      "type": "trace",
+      "timestamp": 1784726329,
+      "timestampMs": 1784726329729,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784726324490",
+      "value": {
+        "targetDialogId": "8065a715-f2c9-4063-b0b6-7ab9f5e03ade",
+        "targetDialogType": 1
+      }
+    },
+    {
+      "id": "7416131e-0f8d-4cec-ae59-7d3a040223b4",
+      "type": "message",
+      "timestamp": 1784726329,
+      "timestampMs": 1784726329726,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Não consigo te ajudar com este tema.\nSe tiver alguma dúvida relacionada a manutenção eletroeletrônica pode me chamar.",
+      "attachments": [],
+      "replyToId": "1784726324490",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanFinished",
+      "id": "15819c57-20fb-4e10-9fd0-22f98ea34ebf",
+      "type": "event",
+      "timestamp": 1784726329,
+      "timestampMs": 1784726329727,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726324490",
+      "value": {
+        "planId": "9950fd65-7c75-4cbb-9c10-27ada964160c"
+      }
+    },
+    {
+      "id": "1784726359435",
+      "type": "message",
+      "timestamp": 1784726359,
+      "timestampMs": 1784726359452,
+      "from": {
+        "id": "423d09d0-32f3-9943-73a9-d7416a9272af",
+        "aadObjectId": "07b2468e-a334-4ace-a29b-2ba8281fde36",
+        "role": 1
+      },
+      "channelId": "msteams",
+      "textFormat": "plain",
+      "text": "o que você pode me ajudar com manutenção eletroeletrônica?",
+      "attachments": [
+        {
+          "contentType": "text/html",
+          "content": "<p>o que você pode me ajudar com manutenção eletroeletrônica?</p>"
+        }
+      ],
+      "channelData": {
+        "tenant": {
+          "id": "0e36c668-f89c-4391-b4e0-d7a789672100"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanReceived",
+      "id": "e2e726c2-31d1-43ca-b702-a65922daba05",
+      "type": "event",
+      "timestamp": 1784726365,
+      "timestampMs": 1784726365501,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceived",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726359435",
+      "value": {
+        "steps": [
+          "cr61e_VOLT.topic.Greeting"
+        ],
+        "isFinalPlan": false,
+        "planIdentifier": "545d95fc-61b5-497e-866a-117b5b249c56"
+      }
+    },
+    {
+      "id": "b3e09adb-15b7-4b3c-9fe8-08d48fc1cb66",
+      "type": "event",
+      "timestamp": 1784726365,
+      "timestampMs": 1784726365501,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanReceivedDebug",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726359435",
+      "value": {
+        "summary": "",
+        "ask": "o que você pode me ajudar com manutenção eletroeletrônica?",
+        "planIdentifier": "545d95fc-61b5-497e-866a-117b5b249c56",
+        "isFinalPlan": false
+      }
+    },
+    {
+      "valueType": "DynamicPlanStepTriggered",
+      "id": "13f24157-cd77-4fc2-a560-baff723c5225",
+      "type": "event",
+      "timestamp": 1784726365,
+      "timestampMs": 1784726365503,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepTriggered",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726359435",
+      "value": {
+        "planIdentifier": "545d95fc-61b5-497e-866a-117b5b249c56",
+        "stepId": "bec02ac8-6b4e-4cb7-b8bc-079e7c662aa6",
+        "taskDialogId": "cr61e_VOLT.topic.Greeting",
+        "thought": "The user is asking what I can help with regarding electro-electronic maintenance. I should explain my capabilities in this area.",
+        "state": 1,
+        "hasRecommendations": false,
+        "type": "CustomTopic"
+      }
+    },
+    {
+      "id": "47493f20-4350-48b1-8bd0-41cd9eee1c33",
+      "type": "event",
+      "timestamp": 1784726365,
+      "timestampMs": 1784726365513,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanStepBindUpdate",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726359435",
+      "value": {
+        "taskDialogId": "cr61e_VOLT.topic.Greeting",
+        "stepId": "bec02ac8-6b4e-4cb7-b8bc-079e7c662aa6",
+        "arguments": {},
+        "planIdentifier": "545d95fc-61b5-497e-866a-117b5b249c56",
+        "autoFilledArguments": []
+      }
+    },
+    {
+      "valueType": "DialogRedirect",
+      "id": "8bbff1643f50408e99796647df3a39dd",
+      "type": "trace",
+      "timestamp": 1784726365,
+      "timestampMs": 1784726365531,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "replyToId": "1784726359435",
+      "value": {
+        "targetDialogId": "0999316d-2f01-4ce6-8743-840f5364da75",
+        "targetDialogType": 1
+      }
+    },
+    {
+      "id": "d122392c-5d5f-4fb9-92d4-4945672c4cf7",
+      "type": "message",
+      "timestamp": 1784726365,
+      "timestampMs": 1784726365529,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Olá, como posso ajudar hoje?",
+      "attachments": [],
+      "replyToId": "1784726359435",
+      "speak": "Olá, <break strength=\"medium\" />. Como posso ajudar?",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "valueType": "DynamicPlanFinished",
+      "id": "00aa2b30-4553-481b-a321-739769026a4c",
+      "type": "event",
+      "timestamp": 1784726365,
+      "timestampMs": 1784726365530,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "name": "DynamicPlanFinished",
+      "channelId": "msteams",
+      "attachments": [],
+      "replyToId": "1784726359435",
+      "value": {
+        "planId": "545d95fc-61b5-497e-866a-117b5b249c56"
+      }
+    },
+    {
+      "id": "ceae129d-fe0b-4de5-9bb2-898de9e72543",
+      "type": "message",
+      "timestamp": 1784726487,
+      "timestampMs": 1784726487137,
+      "from": {
+        "id": "4e586986-690c-e013-d110-6bdee6c9e567",
+        "role": 0
+      },
+      "channelId": "msteams",
+      "textFormat": "markdown",
+      "text": "Conversa encerrada devido inatividade.",
+      "attachments": [],
+      "replyToId": "1784726359435",
+      "channelData": {
+        "feedbackLoop": {
+          "type": "default"
+        }
+      }
+    },
+    {
+      "valueType": "SessionInfo",
+      "id": "0",
+      "type": "trace",
+      "timestamp": 1784726487,
+      "timestampMs": 1784726487137,
+      "from": {
+        "id": "",
+        "role": 0
+      },
+      "value": {
+        "startTimeUtc": "2026-07-22T13:16:25Z",
+        "endTimeUtc": "2026-07-22T13:21:27Z",
+        "type": "Engaged",
+        "outcome": "Resolved",
+        "turnCount": 12,
+        "lastUserIntentId": "0999316d-2f01-4ce6-8743-840f5364da75",
+        "impliedSuccess": true,
+        "outcomeReason": "Resolved"
+      }
+    }
+  ]

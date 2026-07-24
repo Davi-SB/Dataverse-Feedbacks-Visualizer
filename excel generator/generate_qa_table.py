@@ -21,10 +21,8 @@ import pandas as pd
 # PARÂMETROS CONFIGURÁVEIS
 # ============================================================================
 
-TARGET_AGENT = "Assistente Virtual OptMove"
-START_DATE = "2026-07-16"
-FILE_NAME = "conversationtranscripts_hml.csv"
-IGNORE_DESIGN_MODE = False  # True = inclui sessões de teste/design; False = descarta
+TARGET_AGENT = "cr61e_agenteVirtualOptMove"
+START_DATE = "2026-04-27"
 
 # ============================================================================
 # CAMINHOS
@@ -32,12 +30,12 @@ IGNORE_DESIGN_MODE = False  # True = inclui sessões de teste/design; False = de
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
-CSV_PATH = os.path.join(PROJECT_DIR, FILE_NAME)
 
+CSV_PATH = os.path.join(PROJECT_DIR, "conversationtranscripts.csv")
 USERS_CSV_PATH = os.path.join(PROJECT_DIR, "usuarios.csv")
 OUTPUT_DIR = os.path.join(PROJECT_DIR, "excel generator", "generatedTables")
 
-AGENT_COLUMN = "_bot_conversationtranscriptid_value@OData.Community.Display.V1.FormattedValue"
+AGENT_COLUMN = "bot_conversationtranscriptid.schemaname"
 
 # ============================================================================
 # FUNÇÕES AUXILIARES
@@ -221,7 +219,7 @@ def process_row(row, user_map: dict, global_feedback_map: dict) -> list:
         return []
 
     activities = data.get("activities", []) or []
-    if not IGNORE_DESIGN_MODE and not is_real_conversation(activities):
+    if not is_real_conversation(activities):
         return []
 
     activities.sort(key=lambda x: x.get("timestamp", 0))
@@ -297,9 +295,9 @@ def main():
     print(f"Linhas do agente '{TARGET_AGENT}': {len(df)}")
 
     df["conversation_date"] = pd.to_datetime(
-        df["conversationstarttime"], errors="coerce", utc=True
+        df["conversationstarttime"], errors="coerce"
     )
-    start_dt = pd.Timestamp(START_DATE, tz="UTC")
+    start_dt = pd.to_datetime(START_DATE)
     df = df[df["conversation_date"] >= start_dt].copy()
     print(f"Linhas após filtro de data (>= {START_DATE}): {len(df)}")
 
